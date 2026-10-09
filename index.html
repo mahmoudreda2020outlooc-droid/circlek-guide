@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#EE1C25">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>دليل سيركل كي الشامل | باريستا & فوود - الدليل الرسمي وقواعد الحفظ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+    html, body { overflow-x: hidden; width: 100%; -webkit-overflow-scrolling: touch; }
+    body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    .ck-red { background-color: #EE1C25; }
+    .ck-text-red { color: #EE1C25; }
+    .ck-orange { background-color: #F7941D; }
+    .dept-btn-rules-active {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      color: #e0e7ff;
+      border: 2px solid #818cf8;
+      box-shadow: 0 8px 20px -4px rgba(49, 46, 129, 0.35);
+    }
+    .dept-btn-barista-active {
+      background: linear-gradient(135deg, #78350f 0%, #451a03 100%);
+      color: #fef3c7;
+      border: 2px solid #f59e0b;
+      box-shadow: 0 8px 20px -4px rgba(120, 53, 15, 0.35);
+    }
+    
+    .dept-btn-mindmap-active {
+      background: linear-gradient(135deg, #0e7490 0%, #155e75 100%);
+      color: #cffafe;
+      border: 2px solid #22d3ee;
+      box-shadow: 0 8px 20px -4px rgba(14, 116, 144, 0.35);
+    }
+    .mm-node {
+      background: white;
+      border-radius: 1rem;
+      border: 1px solid #e2e8f0;
+      padding: 1rem;
+      box-shadow: 0 2px 6px -1px rgba(0,0,0,0.06);
+      transition: all 0.2s ease;
+    }
+    .mm-node:hover {
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .mm-tag {
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 0.15rem 0.45rem;
+      border-radius: 0.35rem;
+    }
+    .dept-btn-food-active {
+      background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+      color: #fee2e2;
+      border: 2px solid #f87171;
+      box-shadow: 0 8px 20px -4px rgba(185, 28, 28, 0.35);
+    }
+    .dept-btn-inactive {
+      background-color: white;
+      color: #475569;
+      border: 1.5px solid #e2e8f0;
+    }
+    .subtab-active {
+      background-color: #EE1C25;
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 4px 10px rgba(238, 28, 37, 0.25);
+    }
+    .subtab-inactive {
+      background-color: white;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+    }
+    .subtab-inactive:hover { background-color: #f1f5f9; color: #0f172a; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15rem 0.45rem;
+      border-radius: 9999px;
+      font-size: 0.65rem;
+      font-weight: 700;
+    }
+    .card-box {
+      background: white;
+      border-radius: 0.875rem;
+      border: 1px solid #e2e8f0;
+      padding: 0.875rem sm:padding: 1.1rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease;
+    }
+    .card-box:hover {
+      box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.07);
+    }
+    .hack-pill {
+      display: inline-block;
+      background: #eef2ff;
+      color: #3730a3;
+      border: 1px solid #c7d2fe;
+      padding: 0.15rem 0.5rem;
+      border-radius: 0.4rem;
+      font-weight: 800;
+      font-size: 0.7rem;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; font-size: 11px !important; }
+      .dept-pane, .subtab-pane { display: block !important; }
+      .card-box { break-inside: avoid; border: 1px solid #94a3b8 !important; box-shadow: none !important; margin-bottom: 0.75rem !important; }
+    }
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased overflow-x-hidden w-full">
+
+  <!-- ================= TOP HEADER ================= -->
+  <header class="bg-gradient-to-r from-[#EE1C25] via-[#cf151d] to-[#991b1b] text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3.5 relative flex items-center justify-center">
+      
+      <!-- Centered Brand & Title -->
+      <div class="flex items-center justify-center text-center gap-2 sm:gap-3.5">
+        <div class="w-10 h-10 sm:w-13 sm:h-13 rounded-2xl bg-white flex items-center justify-center border-2 border-[#F7941D] shadow-md flex-shrink-0">
+          <span class="text-[#EE1C25] font-black text-2xl sm:text-3xl tracking-tighter">K</span>
+        </div>
+        <div class="text-right">
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <h1 class="text-xl sm:text-3xl font-black tracking-tight text-white leading-none">CIRCLE K</h1>
+            <span class="bg-[#F7941D] text-slate-950 text-[9px] sm:text-xs font-black px-2 py-0.5 rounded-full uppercase tracking-wider">OFFICIAL GUIDE</span>
+          </div>
+          <p class="text-[10px] sm:text-xs text-red-100 font-bold mt-0.5 sm:mt-1 leading-tight">دليل التشغيل الكامل & قواعد الحفظ للشيفت</p>
+        </div>
+      </div>
+
+      <!-- Print Button positioned on the side (Hidden on tiny screens to save space) -->
+      <button onclick="window.print()" class="no-print hidden sm:flex absolute left-4 bg-white/15 hover:bg-white/25 px-3 py-1.5 rounded-xl text-xs font-bold transition shadow-sm items-center gap-1.5" title="طباعة">
+        🖨️ <span>طباعة</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="max-w-7xl mx-auto px-2.5 sm:px-4 py-3 sm:py-4 flex-1 w-full space-y-4 sm:space-y-5">
+
+    <!-- ================= DEPARTMENT MAIN SWITCHER ================= -->
+    <div class="no-print">
+      <div class="text-center mb-1.5">
+        <span class="text-[10px] sm:text-[11px] font-extrabold text-slate-500 uppercase tracking-widest">الأقسام الرئيسية للدليل</span>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-3 max-w-5xl mx-auto">
+        
+        <!-- Memory Hacks Button -->
+        <button 
+          id="btn-main-rules" 
+          onclick="switchDept('rules')"
+          class="dept-btn-rules-active p-2 sm:p-4 rounded-2xl sm:rounded-3xl transition-all duration-300 flex flex-col items-center justify-center text-center gap-0.5 sm:gap-1 cursor-pointer relative"
+        >
+          <div class="w-7 h-7 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-indigo-500/30 flex items-center justify-center text-sm sm:text-xl border border-indigo-400/40">
+            🧠
+          </div>
+          <div>
+            <h2 class="text-[11px] sm:text-base font-black leading-tight">قواعد الحفظ</h2>
+            <p class="hidden sm:block text-[10px] opacity-90 font-medium">المعادلات السحرية للحفظ السريع</p>
+          </div>
+          <span id="badge-rules" class="inline-block bg-indigo-400 text-indigo-950 font-bold text-[8px] sm:text-[9px] px-1.5 sm:px-2 py-0.2 rounded-full mt-0.5">النشط</span>
+        </button>
+
+        <!-- Barista Button -->
+        <button 
+          id="btn-main-barista" 
+          onclick="switchDept('barista')"
+          class="dept-btn-inactive p-2 sm:p-4 rounded-2xl sm:rounded-3xl transition-all duration-300 flex flex-col items-center justify-center text-center gap-0.5 sm:gap-1 cursor-pointer relative"
+        >
+          <div class="w-7 h-7 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-amber-100 flex items-center justify-center text-sm sm:text-xl border border-amber-200">
+            ☕
+          </div>
+          <div>
+            <h2 class="text-[11px] sm:text-base font-black text-slate-800 leading-tight">قسم الباريستا</h2>
+            <p class="hidden sm:block text-[10px] text-slate-500 font-medium">المشروبات، الخلاط، الماكينات</p>
+          </div>
+          <span id="badge-barista" class="hidden bg-amber-500 text-slate-950 font-bold text-[8px] sm:text-[9px] px-1.5 sm:px-2 py-0.2 rounded-full mt-0.5">النشط</span>
+        </button>
+
+        <!-- Food Button -->
+        <button 
+          id="btn-main-food" 
+          onclick="switchDept('food')"
+          class="dept-btn-inactive p-2 sm:p-4 rounded-2xl sm:rounded-3xl transition-all duration-300 flex flex-col items-center justify-center text-center gap-0.5 sm:gap-1 cursor-pointer relative"
+        >
+          <div class="w-7 h-7 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-red-100 flex items-center justify-center text-sm sm:text-xl border border-red-200">
+            🥪
+          </div>
+          <div>
+            <h2 class="text-[11px] sm:text-base font-black text-slate-800 leading-tight">قسم الفوود</h2>
+            <p class="hidden sm:block text-[10px] text-slate-500 font-medium">الساندوتشات، البيتزا، البيكري</p>
+          </div>
+          <span id="badge-food" class="hidden bg-red-600 text-white font-bold text-[8px] sm:text-[9px] px-1.5 sm:px-2 py-0.2 rounded-full mt-0.5">النشط</span>
+        </button>
+
+        <!-- Mind Map Button -->
+        <button 
+          id="btn-main-mindmap" 
+          onclick="switchDept('mindmap')"
+          class="dept-btn-inactive p-2 sm:p-4 rounded-2xl sm:rounded-3xl transition-all duration-300 flex flex-col items-center justify-center text-center gap-0.5 sm:gap-1 cursor-pointer relative"
+        >
+          <div class="w-7 h-7 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-cyan-100 flex items-center justify-center text-sm sm:text-xl border border-cyan-200">
+            🗺️
+          </div>
+          <div>
+            <h2 class="text-[11px] sm:text-base font-black text-slate-800 leading-tight">المايند ماب</h2>
+            <p class="hidden sm:block text-[10px] text-slate-500 font-medium">الشجرة الهرمية الشاملة</p>
+          </div>
+          <span id="badge-mindmap" class="hidden bg-cyan-600 text-white font-bold text-[8px] sm:text-[9px] px-1.5 sm:px-2 py-0.2 rounded-full mt-0.5">النشط</span>
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- ================= 0. MEMORY RULES & HACKS (NEW SECTION) ================= -->
+    <!-- ========================================================================= -->
+
+    <!-- ========================================================================= -->
+    <!-- ================= 3. COMPREHENSIVE MIND MAP SECTION ===================== -->
+    <!-- ========================================================================= -->
+    <div id="dept-mindmap" class="dept-pane hidden space-y-6">
+      
+      <!-- Mindmap Top Header -->
+      <div class="bg-gradient-to-r from-cyan-950 via-cyan-900 to-slate-900 text-white p-4 sm:p-6 rounded-3xl shadow-xl border border-cyan-700/50 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <span class="text-3xl sm:text-4xl">🗺️</span>
+            <div>
+              <h3 class="text-lg sm:text-2xl font-black text-cyan-200">خريطة سيركل كي الذهنية الشاملة (Circle K Mind Map)</h3>
+              <p class="text-xs sm:text-sm text-cyan-300 mt-0.5 font-medium">الشجرة التشغيلية الكاملة لكل أقسام المشروبات، الأطعمة، والجرامات والمعايير</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs font-black">
+          <span class="bg-amber-500 text-slate-950 px-3 py-1.5 rounded-xl shadow-sm">☕ 6 فروع باريستا</span>
+          <span class="bg-red-600 text-white px-3 py-1.5 rounded-xl shadow-sm">🥪 7 فروع فوود</span>
+          <span class="bg-indigo-600 text-white px-3 py-1.5 rounded-xl shadow-sm">🧠 قواعد الحفظ</span>
+        </div>
+      </div>
+
+      <!-- Central Hub Visual -->
+      <div class="flex justify-center">
+        <div class="bg-gradient-to-r from-[#EE1C25] to-[#991b1b] text-white px-6 py-2.5 rounded-full font-black text-sm sm:text-base shadow-lg border-2 border-[#F7941D] flex items-center gap-2 animate-bounce">
+          <span>⭕</span>
+          <span>المركز التشغيلي المعتمد - CIRCLE K EGYPT</span>
+          <span>⭕</span>
+        </div>
+      </div>
+
+      <!-- Branch 1: Barista Tree -->
+      <div class="space-y-3">
+        <div class="flex items-center gap-2 border-b-2 border-amber-500 pb-1.5">
+          <span class="text-xl">☕</span>
+          <h4 class="text-sm sm:text-lg font-black text-amber-950">1. شجرة قطاع الباريستا (Barista Tree)</h4>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs">
+          
+          <!-- Hot Branch -->
+          <div class="mm-node border-r-4 border-r-amber-600 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-amber-900 text-sm">☕ فرع المشروبات الساخنة</strong>
+              <span class="mm-tag bg-amber-100 text-amber-900">Hot Drinks</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>الاسبرسو:</strong> سنجل (7.5جم / 30مل / 30ث) | دبل (15جم / 60مل).</p>
+              <p>• <strong>مشتقات الاسبرسو:</strong> ميكاتو (فوم لبن) | كونبانا (10-15جم ويبنج) | كراميل ميكاتو (فانيليا + كراميل).</p>
+              <p>• <strong>الأكواب (8 / 12 / 20 أونز):</strong> كابتشينو (1/2/3 شوت + لبن وفوم كثيف) | لاتيه (1/2 شوت + لبن وفوم ناعم) | فلات وايت (12 أونز: 3 شوت + 300 لبن) | أمريكانو (1/2/3 شوت + ماء ساخن).</p>
+              <p>• <strong>الموكا:</strong> موكا عادية (15/30/45 صوص شوكلت) | موكا نعناع (+10/20/30 نعناع).</p>
+              <p>• <strong>الهوت شوكلت:</strong> تقليدي (40/60/80 بودر) | فروتي (+15 فراولة) | مارشملو (5 بيتشر + 5 توبينج) | سبايسي (20 سبايسي).</p>
+              <p>• <strong>سبيشيال لاتيه وسبريد (12 أونز):</strong> سبانيش (50 حليب مكثف) | دولتشي (30 صوص) | وايت موكا (30 صوص) | نوتيلا (25 صوص) | لوتس (40 سبريد) | بيستاشيو (40 سبريد) | تشاي لاتيه (30 فليفر + كراميل) | أبل سيدر (قرفة وقرنفل) | جنزبيل بالعسل (20 عسل + 20 ليمون).</p>
+              <p class="font-bold text-amber-900 bg-amber-50 p-1.5 rounded-lg">• <strong>سلسلة الشوفان الساخنة (12 أونز):</strong> هوت روبيتشينو (333015) & هوت سولتيتشينو (333016) [30جم + دبل اسبرسو + 240 حليب شوفان].</p>
+            </div>
+          </div>
+
+          <!-- Iced Branch -->
+          <div class="mm-node border-r-4 border-r-sky-500 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-sky-900 text-sm">🧊 فرع المشروبات المثلجة</strong>
+              <span class="mm-tag bg-sky-100 text-sky-900">Ice Formula 5+100</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>معادلة الآيس الموحدة:</strong> 5 مكعبات ثلج + 100 مل لبن ساقع + سنجل اسبرسو / صوص.</p>
+              <p>• <strong>الأصناف الباردة:</strong> آيس لاتيه | آيس موكا (30 صوص) | آيس وايت موكا (30 صوص) | آيس دولتشي (30 صوص) | آيس سبانش (50 مكثف) | آيس سبايس لاتيه (20 سبايسي).</p>
+              <p>• <strong>آيس أمريكانو:</strong> سنجل لونج 60مل + 20 سيرب سكر + ماء بارد + 5 ثلج.</p>
+              <p>• <strong>آيس تي (خلاط 3 ثواني):</strong> 200 ماء + 40 شاي + 10 فليفر + 5 ثلج ⬅️ يصب بكوب به 5 ثلج.</p>
+              <p class="font-bold text-sky-900 bg-sky-50 p-1.5 rounded-lg">• <strong>سلسلة الشوفان الباردة:</strong> آيس روبيتشينو (338015) & آيس سولتيتشينو (338016) [30مل + سنجل اسبرسو + ملء الكوب ثلج + 200 حليب شوفان].</p>
+            </div>
+          </div>
+
+          <!-- Blended & Mocktails Branch -->
+          <div class="mm-node border-r-4 border-r-purple-500 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-purple-900 text-sm">🌪️ فرع الخلاط & المنعشات</strong>
+              <span class="mm-tag bg-purple-100 text-purple-900">35s & 14 oz</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>قاعدة الخلاط الموحدة:</strong> ضرب 35 ثانية + 10 مكعبات ثلج.</p>
+              <p>• <strong>الفرابيه:</strong> 100 لبن + 60 بودر (كوفي، لاتيه، موكا، وايت، كراميل، لوتس، بيستاشيو).</p>
+              <p>• <strong>السموذي:</strong> 100 ماء + 45 بيوريه (فراولة، خوخ، كيوي، باشون، بيري، أناناس).</p>
+              <p>• <strong>يوجرت سموذي:</strong> 100 لبن + 25 بودر زبادي + 45 بيوريه.</p>
+              <p>• <strong>ميلك تشيك:</strong> 150 لبن + 60 بودر | <strong>فروستر:</strong> 100 ماء + 80 بودر + 11 ثلج.</p>
+              <p>• <strong>موخيتو (14 أونز):</strong> ليمونة 4 أرباع + 5 نعناع + 5 ثلج + 1 بامب نكهة (15مل) + سبرايت.</p>
+              <p>• <strong>ريد بول (14 أونز):</strong> 2 ليمونة + 10 ثلج + 2 بامب نكهة + كان ريد بول.</p>
+            </div>
+          </div>
+
+          <!-- Machines & Softener Branch -->
+          <div class="mm-node border-r-4 border-r-stone-500 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-stone-900 text-sm">⚙️ الماكينات وغسيل السوفتنر</strong>
+              <span class="mm-tag bg-stone-100 text-stone-900">Equipment</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>الويبنج كريم:</strong> 500مل + طلقة غاز وهز سريع (صلاحية 3 أيام بالثلاجة).</p>
+              <p>• <strong>ماكينة الهوت شوكلت:</strong> 160جم بودر لكل 1 لتر لبن (تشغيل 90°C ثم 60°C - يومين).</p>
+              <p>• <strong>ماكينة الفروستر:</strong> 200جم بودر لكل 1 لتر ماء (10 أيام مع فحص كل 3 أيام).</p>
+              <p>• <strong>ماكينة الآيس كريم:</strong> 990 بودر + 1950 ماء + 1500 لبن على 3 مراحل بالبلندر.</p>
+              <p class="font-bold text-red-700 bg-red-50 p-1.5 rounded-lg">• <strong>غسيل السوفتنر:</strong> كل 15 يوم | 2 كيس ملح خشن | ذراع علوي شمال وسفلي يمين | غسيل 30 دقيقة.</p>
+            </div>
+          </div>
+
+          <!-- Expirations & Temps Branch -->
+          <div class="mm-node border-r-4 border-r-emerald-600 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-emerald-900 text-sm">⏱️ الصلاحيات ودرجات الحرارة</strong>
+              <span class="mm-tag bg-emerald-100 text-emerald-900">Standards</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>سيرب خفيف:</strong> 3 شهور | <strong>صوص زجاجة:</strong> 28 يوم.</p>
+              <p>• <strong>إسكويزر أي صوص:</strong> 3 أيام فقط بالثلاجة.</p>
+              <p>• <strong>لبن جهينة:</strong> 2 يوم (48 ساعة) | <strong>بن المطحنة:</strong> يوم واحد.</p>
+              <p>• <strong>حرارة ماكينة القهوة:</strong> 88-92°C | <strong>الضغط:</strong> 8-10 بار | <strong>الاستيم:</strong> 1.1-1.3 بار.</p>
+              <p>• <strong>الرمالة:</strong> 200-250°C | <strong>حرارة اللبن الساخن:</strong> 65°C (والأقصى 72°C).</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Branch 2: Food Tree -->
+      <div class="space-y-3 pt-4">
+        <div class="flex items-center gap-2 border-b-2 border-red-500 pb-1.5">
+          <span class="text-xl">🥪</span>
+          <h4 class="text-sm sm:text-lg font-black text-red-950">2. شجرة قطاع الفوود (Food Tree)</h4>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs">
+          
+          <!-- Sandwiches Branch -->
+          <div class="mm-node border-r-4 border-r-red-600 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-red-900 text-sm">🥪 فرع الساندوتشات والوجبات</strong>
+              <span class="mm-tag bg-red-100 text-red-900">Sandwiches</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>فيينا أبيض ساخن (30ث ميكرو + 1د توستر):</strong> روست بيف، بيف مدخن، ستافد، ميكس تشيز، كواترو، تشكن طحينة، مشروم تشكن، أورانج، أفانتي، بيستو، كاري، هاني، ليمون، سلامي، تركي، ميكس كولد كت، بافلو، رومي بسطرمة.</p>
+              <p>• <strong>حلومي بانيني:</strong> توستر دقيقتين فقط على 150°C بدون ميكروويف.</p>
+              <p>• <strong>فيينا بني بالحبوب (بارد ممنوع تسخينه):</strong> تونة ميكس، تونة بالمشمش، سالمون مدخن.</p>
+              <p>• <strong>كلوب (4) & راب (6) & ساور دو (3):</strong> توستر دقيقة 150°C.</p>
+              <p>• <strong>كينج ساندوتش بالعسل والحبوب (6 أصناف):</strong> يقطع نصفين ⬅️ 30ث ميكرو + 1د توستر ⬅️ يلف بورق زبدة بكيس البيكري.</p>
+              <p>• <strong>الوجبات (7 أصناف):</strong> دقيقتين ميكروويف بدون غطاء + شوكة وسكينة ومنديل.</p>
+              <p>• <strong>السلطات (5 أصناف):</strong> مكسيكية، جريك، سيزر، تونة، روكا.</p>
+            </div>
+          </div>
+
+          <!-- Pizza & Italian Branch -->
+          <div class="mm-node border-r-4 border-r-amber-600 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-amber-900 text-sm">🍕 فرع البيتزا & المنتجات الإيطالية</strong>
+              <span class="mm-tag bg-amber-100 text-amber-900">Pizza & Italian</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>قاعدة البيتزا الكبيرة:</strong> 250جم عجين + 50جم صوص + 150جم موتزاريلا (نصفها تحت ونصفها فوق الحشو لحمايته) | فرن 260°C فوق و 200°C تحت (5-7د) ⬅️ 8 قطع + 2جم زعتر.</p>
+              <p>• <strong>الأوزان:</strong> فراخ/سلامي/بيبروني (70جم) | تونة/هوت دوج (60جم) | مشروم فونجي (120جم) | سوبر سوبريم (60 سلامي+30 روز+30 تركي+30 بيبروني) | ميكس جبن (40 أصفر+40 أحمر+20 ريكفورد).</p>
+              <p>• <strong>جونيور بيتزا (3-5د):</strong> مارجريتا (779534)، مشروم (779535)، ميكس جبن (779536)، خضار (779537) [قطعة واحدة غير مستوية بالكابينة].</p>
+              <p>• <strong>الإيطالي:</strong> استرومبولي (3 أكواد: 779223، 779221، 779222) | كالزوني (3 أكواد: 779065، 779066، 779067) | كرواسون ويل (3 أكواد: 779267، 779268، 779269).</p>
+            </div>
+          </div>
+
+          <!-- Rich Cut & Breakfast Branch -->
+          <div class="mm-node border-r-4 border-r-orange-600 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-orange-900 text-sm">🍔 فرع ريتش كت & الفطار الساخن</strong>
+              <span class="mm-tag bg-orange-100 text-orange-900">Rich Cut & Breakfast</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>البرجر (125جم):</strong> 3+3 دقائق جريل 150°C بدون ضغط + جبنة مارلي في آخر دقيقة.</p>
+              <p>• <strong>الهوت دوج:</strong> 60/80/100جم (5د سخان 90°C ⬅️ 7د جريل 150°C بتشريح خفيف).</p>
+              <p>• <strong>الاستربس:</strong> 2 و 4 قطع (778111 & 778116) - دقيقتين ديفروست + رشة دقيق + 3-5د قلاية 170°C.</p>
+              <p>• <strong>عجين الشامي الفريش:</strong> 1 كجم دقيق فايف ستارز ⬅️ تخمير 20د ⬅️ كور 70جم ⬅️ خبز 250°C.</p>
+              <p>• <strong>فرنش توست:</strong> شريحتين 2سم + مارينيه + سيرب سكر بني | <strong>بانكيك:</strong> 3 شرائح + 3جم زبدة.</p>
+              <p>• <strong>سجق شرقي (6د):</strong> 70جم سجق + 100 فلفل + 3 طماطم شيري + دبس رمان.</p>
+              <p>• <strong>البيض:</strong> سر الهشاشة (5جم لبن + 2جم بيكنج بودر) | أومليت، سكرامبلد، عيون، بسطرمة.</p>
+              <p>• <strong>الفول:</strong> زبدة، طحينة، بيض | فلافل بسمة | طبق جبنة أورينتال بريزيدون.</p>
+            </div>
+          </div>
+
+          <!-- Bakery Branch -->
+          <div class="mm-node border-r-4 border-r-yellow-600 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-yellow-900 text-sm">🥐 فرع البيكري والتخمير</strong>
+              <span class="mm-tag bg-yellow-100 text-yellow-900">Bakery Process</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>مواعيد الخبز:</strong> 7 صباحاً و 12 ظهراً (الرص 8 قطع كحد أقصى بالصاج متباعدة).</p>
+              <p>• <strong>مراحل التشغيل:</strong> إسالة 1.5-2 ساعة (37°C) ⬅️ مخمر 32°C لساعة وربع ⬅️ دهان التلميع (بيض + لبن + فانيليا + كريمة) ⬅️ تسوية 18-20 دقيقة على 160°C مع لف الصاج دقيقة 10.</p>
+              <p>• <strong>المقاسات المعتمدة:</strong> كرواسون 19-20سم × 4سم | باتيه 10-11سم × 5-6سم × 4سم.</p>
+              <p class="font-bold text-red-700 bg-red-50 p-1.5 rounded-lg">• <strong>ممنوعات البيكري الـ 4:</strong> ممنوع ثلاجة، ممنوع فريزر بعد الاستلام، ممنوع ميكروويف، ممنوع تسخين الكابينة (التسخين دقيقتين بالفرن 180°C).</p>
+            </div>
+          </div>
+
+          <!-- Planograms & Safety Branch -->
+          <div class="mm-node border-r-4 border-r-indigo-600 space-y-2">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-indigo-900 text-sm">📊 البلانوجرام وصحة الغذاء</strong>
+              <span class="mm-tag bg-indigo-100 text-indigo-900">Safety & Display</span>
+            </div>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>ثلاجة الساندوتشات (4 أرفف من اليمين):</strong> الرف 1 (كينجات وحلومي ورول) | الرف 2 (تركي، بافلو، ميكس، روز، سلامي، ميكس تشيز) | الرف 3 (تونة، سالمون، فراخات) | الرف 4 (رابات، كلوب، وجبات، سلطات).</p>
+              <p>• <strong>كابينة البيكري (4 و 3 أرفف):</strong> استرومبولي وكالزوني بالأعلى ⬅️ كرواسونات ومخبوزات بالوسط ⬅️ باتيهات بالأسفل.</p>
+              <p>• <strong>كابينة الدونتس:</strong> كانتوشي ⬅️ إنجلش كيك ⬅️ دونتس ⬅️ كوكيز.</p>
+              <p>• <strong>تطهير الخضار:</strong> 1 كوب خل + 3 كوب ماء + 1 ليمونة في البخاخ (ونقع الخس 15 دقيقة).</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="dept-rules" class="dept-pane block space-y-4">
+      
+      <!-- Top Banner -->
+      <div class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-slate-900 text-white p-4 sm:p-5 rounded-3xl shadow-lg border border-indigo-700/50 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">🧠</span>
+            <h3 class="text-lg sm:text-xl font-black text-indigo-100">كبسولات وقواعد الحفظ الذكي (Memory Hacks)</h3>
+          </div>
+          <p class="text-xs text-indigo-200 mt-1">قواعد ومعادلات ذهبية مختصرة تساعدك تحفظ كل أرقام المانيوالين في دقائق بدون ما تتلخبط في الشيفت!</p>
+        </div>
+        <div class="flex gap-2 text-xs font-bold">
+          <span class="bg-amber-400 text-amber-950 px-3 py-1.5 rounded-xl">☕ 7 قواعد للباريستا</span>
+          <span class="bg-red-500 text-white px-3 py-1.5 rounded-xl">🥪 6 قواعد للفوود</span>
+        </div>
+      </div>
+
+      <!-- Barista Memory Hacks Grid -->
+      <div class="space-y-2">
+        <h4 class="text-xs sm:text-sm font-black text-amber-900 flex items-center gap-1.5">
+          <span>☕</span> <span>قواعد حفظ قسم الباريستا السريعة:</span>
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2 border-r-4 border-r-amber-500">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-amber-900 text-sm">1. قاعدة البن والاستخلاص (7.5 / 30 / 30)</strong>
+              <span class="hack-pill">الاسبرسو</span>
+            </div>
+            <p>• <strong>سنجل اسبرسو:</strong> <span class="font-bold text-amber-800">7.5 جم بن</span> ⬅️ <span class="font-bold text-blue-700">30 مل مياه</span> ⬅️ <span class="font-bold text-emerald-700">30 ثانية</span> وقت استخلاص.</p>
+            <p>• <strong>دبل اسبرسو:</strong> الضعف تماماً = <span class="font-bold text-amber-800">15 جم بن</span> (2 شوت) ⬅️ <span class="font-bold text-blue-700">60 مل مياه</span>.</p>
+            <div class="p-2 bg-amber-50 rounded-lg text-[11px] text-amber-900 font-bold">
+              💡 سرعة الحفظ: رقم 7.5 ومضاعفاته هو أساس كل شوتات القهوة!
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-amber-500">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-amber-900 text-sm">2. قاعدة توزيع الشوتات (8 / 12 / 20 أونز)</strong>
+              <span class="hack-pill">الأكواب</span>
+            </div>
+            <p>• <strong>ميديم 8 أونز:</strong> سنجل شوت (1 شوت).</p>
+            <p>• <strong>لارج 12 أونز:</strong> دبل شوت (2 شوت) <em class="text-red-600 font-bold">ما عدا الفلات وايت (3 شوت)!</em></p>
+            <p>• <strong>إكس لارج 20 أونز:</strong> تريبل شوت (3 شوت).</p>
+            <div class="p-2 bg-indigo-50 rounded-lg text-[11px] text-indigo-900 font-bold">
+              💡 قاعدة اللاتيه: اللاتيه دايماً شوتاته أقل من الكابتشينو (لارج = 1 شوت / إكس لارج = 2 شوت) عشان يعطي طعم لبن أكتر!
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-amber-500">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-amber-900 text-sm">3. قاعدة البامب (15 مل vs 10 مل)</strong>
+              <span class="hack-pill">المعايير</span>
+            </div>
+            <p>• <strong>الصوصات الكثيفة & البيوريهات:</strong> 1 بامب = <span class="font-bold text-red-600">15 مل</span>.</p>
+            <p>• <strong>الفليفرات والسيربات الخفيفة:</strong> 1 بامب = <span class="font-bold text-blue-600">10 مل</span>.</p>
+            <p>• <strong>تدرج صوص الموكا:</strong> 15 مل (ميديم) ⬅️ 30 مل (لارج) ⬅️ 45 مل (إكس لارج) [تزيد 15 مل مع كل مقاس!].</p>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-amber-500">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-amber-900 text-sm">4. معادلة الآيس الموحدة (قاعدة 5 + 100)</strong>
+              <span class="hack-pill">البارد</span>
+            </div>
+            <div class="p-2 bg-sky-50 rounded-lg text-sky-950 font-bold text-xs text-center border border-sky-200">
+              🧊 5 مكعبات ثلج + 100 مل لبن ساقع + سنجل اسبرسو / صوص
+            </div>
+            <p class="text-[11px] text-slate-600">تنطبق على: آيس لاتيه، آيس موكا، آيس وايت موكا، آيس سبانش، آيس دولتشي، وآيس سبايسي!</p>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-amber-500">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-amber-900 text-sm">5. معادلة الخلاط والبلندر (قاعدة 35 ثانية)</strong>
+              <span class="hack-pill">البلندر</span>
+            </div>
+            <p>• <strong>الوقت والثلج موحدين دائماً:</strong> <span class="font-bold text-purple-700">35 ثانية ضرب + 10 مكعبات ثلج</span>.</p>
+            <p>• <strong>الفرابيه:</strong> 100 مل لبن + 60 جم بودر.</p>
+            <p>• <strong>السموذي:</strong> 100 مل مياه + 45 مل بيوريه (3 بامب).</p>
+            <p>• <strong>الميلك تشيك:</strong> 150 مل لبن + 60 جم بودر.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-amber-500">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-amber-900 text-sm">6. قاعدة الصلاحيات السريعة (3 × 3 × 3)</strong>
+              <span class="hack-pill">الصلاحيات</span>
+            </div>
+            <p>• <strong>السيرب الخفيف:</strong> 3 شهور.</p>
+            <p>• <strong>الصوص بالزجاجة:</strong> 28 يوم.</p>
+            <p>• <strong>أي صوص في الإسكويزر:</strong> <span class="font-bold text-red-600">3 أيام فقط!</span></p>
+            <p>• <strong>اللبن جهينة:</strong> يومين (48 ساعة) | <strong>بن المطحنة:</strong> يوم واحد.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-amber-500">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-amber-900 text-sm">7. قاعدة مشروبات الشوفان (سولتيتشينو & روبيتشينو)</strong>
+              <span class="hack-pill">حليب شوفان</span>
+            </div>
+            <p>• <strong>الساخن 12 أونز (أكواد 333016 & 333015):</strong> 30 جم فليفر/سيرب + دبل اسبرسو + 240 مل حليب شوفان مبخر.</p>
+            <p>• <strong>الآيس البارد (أكواد 338016 & 338015):</strong> 30 مل فليفر/سيرب + سنجل اسبرسو + ملء الكوب ثلج + 200 مل حليب شوفان.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Food Memory Hacks Grid -->
+      <div class="space-y-2 pt-3">
+        <h4 class="text-xs sm:text-sm font-black text-red-900 flex items-center gap-1.5">
+          <span>🥪</span> <span>قواعد حفظ قسم الفوود السريعة:</span>
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2 border-r-4 border-r-red-600">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-red-900 text-sm">1. قاعدة البيتزا الثلاثية (250 / 50 / 150)</strong>
+              <span class="hack-pill">البيتزا</span>
+            </div>
+            <div class="p-2 bg-red-50 rounded-lg text-red-950 font-bold text-center border border-red-200">
+              🍕 250 جم عجين + 50 جم صوص + 150 جم موتزاريلا
+            </div>
+            <p>• <strong>توزيع الجبنة:</strong> نصف الموتزاريلا (75 جم) بالأسفل ⬅️ الحشوة ⬅️ النصف الآخر (75 جم) بالأعلى لحماية الحشو من الاحتراق!</p>
+            <p>• <strong>التسوية:</strong> علوي 260°C / سفلي 200°C لمدة 5-7 دقائق ⬅️ 8 قطع + 2 جم زعتر.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-red-600">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-red-900 text-sm">2. قاعدة أوزان حشوات البيتزا</strong>
+              <span class="hack-pill">الحشوات</span>
+            </div>
+            <p>• <strong>الفراخ & السلامي & البيبروني:</strong> <span class="font-bold text-red-700">70 جم</span> (الفراخ مع 40 فلفل و 50 زيتون).</p>
+            <p>• <strong>التونة & الهوت دوج:</strong> <span class="font-bold text-amber-700">60 جم</span>.</p>
+            <p>• <strong>المشروم الفونجي:</strong> <span class="font-bold text-purple-700">120 جم</span> مشروم فريش.</p>
+            <p>• <strong>سوبر سوبريم (لحوم):</strong> 60 سلامي + 30 روزبيف + 30 تركي + 30 بيبروني.</p>
+            <p>• <strong>ميكس جبن:</strong> 40 شيدر أصفر + 40 شيدر أحمر + 20 ريكفورد.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-red-600">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-red-900 text-sm">3. قاعدة تسخين الساندوتشات</strong>
+              <span class="hack-pill">التسخين</span>
+            </div>
+            <p>• <strong>القاعدة العامة:</strong> توستر <strong>دقيقة واحدة على 150°C</strong> (فيينا، راب، كلوب، ساور دو، كينج).</p>
+            <p>• <strong>ساندوتشات الحبوب البنية (تونة/سالمون):</strong> <span class="font-bold text-cyan-800">باردة نهائياً ممنوع تسخينها</span> (تدفئة الخبز فقط 30 ثانية لو العميل طلب).</p>
+            <p>• <strong>حلومي بانيني:</strong> توستر دقيقتين 150°C بدون ميكروويف.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-red-600">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-red-900 text-sm">4. قاعدة ريتش كت (3+3 و 5+7)</strong>
+              <span class="hack-pill">ريتش كت</span>
+            </div>
+            <p>• <strong>البرجر (125 جم):</strong> 3 دقائق وجه أول + 3 دقائق وجه ثاني على 150°C بدون ضغط + شريحة جبنة مارلي في آخر دقيقة.</p>
+            <p>• <strong>الهوت دوج:</strong> 5 دقائق بسخان المياه (90°C) ⬅️ 7 دقائق على الجريل (150°C) مع تشريح خفيف.</p>
+            <p>• <strong>الاستربس:</strong> دقيقتين ديفروست ⬅️ رشة دقيق ⬅️ 3-5 دقائق قلاية (170°C) ⬅️ تصفية 20 ثانية.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-red-600">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-red-900 text-sm">5. قاعدة الأومليت وسر النفشة</strong>
+              <span class="hack-pill">الفطار</span>
+            </div>
+            <div class="p-2 bg-amber-50 rounded-lg text-amber-950 font-bold text-center border border-amber-200">
+              🥚 سر نفشة الأومليت: 5 جم لبن + 2 جم بيكنج بودر مع كل 2 بيضة!
+            </div>
+            <p>• أومليت خضار: + 50 جم خضار | أومليت جبنة: + 30 جم جبنة أفانتي مبشورة (20 جم لساندوتش البيضة).</p>
+            <p>• <strong>السجق الشرقي (6 دقائق):</strong> 70 جم سجق + 100 جم فلفل + 3 طماطم شيري + 10 جم دبس رمان.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2 border-r-4 border-r-red-600">
+            <div class="flex justify-between items-center border-b pb-1">
+              <strong class="text-red-900 text-sm">6. قاعدة البيكري والممنوعات الـ 4</strong>
+              <span class="hack-pill">البيكري</span>
+            </div>
+            <p>• <span class="font-bold text-red-600">الممنوعات الـ 4:</span> ممنوع ثلاجة، ممنوع فريزر بعد الاستلام، ممنوع ميكروويف، ممنوع تسخين الكابينة.</p>
+            <p>• <strong>التسخين للعميل:</strong> دقيقتين بالفرن على 180°C فقط.</p>
+            <p>• <strong>الخبيز:</strong> 8 قطع بالصاج ⬅️ إسالة 1.5-2 ساعة (37°C) ⬅️ مخمر 32°C لساعة وربع ⬅️ خبيز 18-20 دقيقة على 160°C مع لف الصاج دقيقة 10.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- ======================= 1. BARISTA DEPARTMENT =========================== -->
+    <!-- ========================================================================= -->
+    <div id="dept-barista" class="dept-pane hidden space-y-4">
+      
+      <!-- Sub-tabs for Barista -->
+      <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 no-scrollbar no-print px-0.5">
+        <button onclick="switchBaristaSub('b-hot')" class="b-sub-btn subtab-active px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">☕ المشروبات الساخنة (Hot)</button>
+        <button onclick="switchBaristaSub('b-cold')" class="b-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">🧊 المشروبات المثلجة (Ice)</button>
+        <button onclick="switchBaristaSub('b-blended')" class="b-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">🌪️ الخلاط (فرابيه & سموذي)</button>
+        <button onclick="switchBaristaSub('b-mocktails')" class="b-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">🍹 موخيتو & كوكتيل ريد بول</button>
+        <button onclick="switchBaristaSub('b-machines')" class="b-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">⚙️ تحضيرات الماكينات & السوفتنر</button>
+        <button onclick="switchBaristaSub('b-standards')" class="b-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">⏱️ الصلاحيات، الموردين & درجات الحرارة</button>
+      </div>
+
+      <!-- 1.1 BARISTA HOT DRINKS -->
+      <div id="b-hot" class="b-sub-pane block space-y-4">
+        
+        <!-- Comparison Table -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="bg-slate-900 text-white px-4 py-2.5 text-xs font-bold flex justify-between items-center">
+            <span>☕ جدول معايير المشروبات الساخنة الأساسية (كابتشينو، لاتيه، فلات وايت، أمريكانو)</span>
+            <span class="text-amber-400 text-[10px]">حرارة الاسبرسو: 88-92°C | ضغط البار: 8-10</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-right text-xs">
+              <thead class="bg-slate-100 text-slate-700 border-b">
+                <tr>
+                  <th class="p-2.5 font-extrabold">المشروب</th>
+                  <th class="p-2.5 font-extrabold">ميديم (8 أونز)</th>
+                  <th class="p-2.5 font-extrabold">لارج (12 أونز)</th>
+                  <th class="p-2.5 font-extrabold">إكس لارج (20 أونز)</th>
+                  <th class="p-2.5 font-extrabold">ملاحظات التحضير والفوم</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y text-slate-700">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">كابتشينو</td>
+                  <td class="p-2.5">سنجل اسبرسو + 160 مل لبن</td>
+                  <td class="p-2.5 font-bold text-red-600">دبل اسبرسو + 240 مل لبن</td>
+                  <td class="p-2.5">تريبل اسبرسو (3 شوت) + 400 مل لبن</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">فوم كثيف وخشن وأعلى في الكوب</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">لاتيه</td>
+                  <td class="p-2.5 text-slate-400">-</td>
+                  <td class="p-2.5 font-bold text-emerald-600">شوت اسبرسو + 240 مل لبن</td>
+                  <td class="p-2.5 font-bold text-emerald-600">دبل اسبرسو + 500 مل لبن</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">فوم ناعم وأقل خشانة من الكابتشينو</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">فلات وايت</td>
+                  <td class="p-2.5 text-slate-400">-</td>
+                  <td class="p-2.5 font-bold text-purple-700">3 شوت اسبرسو + 300 مل لبن</td>
+                  <td class="p-2.5 text-slate-400">-</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">يقدم في كوب 12 أونز فقط، مايكروفوم ناعم</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">أمريكان كوفي</td>
+                  <td class="p-2.5">سنجل اسبرسو + تكملة ماء ساخن</td>
+                  <td class="p-2.5">دبل اسبرسو + تكملة ماء ساخن</td>
+                  <td class="p-2.5">3 شوت اسبرسو + تكملة ماء ساخن</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">ماء ساخن من الماكينة</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">موكا (صوص شوكلت)</td>
+                  <td class="p-2.5">15 مل صوص + سنجل + 160 لبن</td>
+                  <td class="p-2.5">30 مل صوص + دبل + 240 لبن</td>
+                  <td class="p-2.5">45 مل صوص + 3 شوت + 400 لبن</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">يقلب الصوص مع الاسبرسو بالمعيار أولاً</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">موكا أفتر إيت (نعناع)</td>
+                  <td class="p-2.5">10 نعناع + 15 صوص + سنجل + 160</td>
+                  <td class="p-2.5">20 نعناع + 30 صوص + دبل + 240</td>
+                  <td class="p-2.5">30 نعناع + 45 صوص + 3 شوت + 400</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">فليفر نعناع + صوص شوكلت مونين</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Detail Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>☕ سنجل & دبل اسبرسو</span>
+              <span class="badge bg-amber-100 text-amber-900">4 & 8 أونز</span>
+            </div>
+            <p>• <strong>سنجل اسبرسو:</strong> 7.5 جم بن مستخلص في 30 مل مياه خلال 30 ثانية. يقدم في فنجان اسبرسو أو كوب 4 أونز.</p>
+            <p>• <strong>دبل اسبرسو:</strong> 15 جم بن (2 شوت) مستخلص في 60 مل مياه. يقدم في فنجان دبل أو كوب 8 أونز.</p>
+            <div class="p-2 bg-slate-50 rounded-lg text-[11px] text-slate-600">
+              ⚙️ <strong>المعدات والأدوات:</strong> ماكينة القهوة، المطحنة، وضبط مؤشراتها لخشونة البن ودرجة حرارة الماء.
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>🥛 ميكاتو & كونبانا</span>
+              <span class="badge bg-purple-100 text-purple-900">سنجل & دبل</span>
+            </div>
+            <p>• <strong>سنجل ميكاتو:</strong> 7.5 جم بن (30 مل مياه) + <strong>ملعقة فوم لبن جهينة</strong> (كوب 4 أونز).</p>
+            <p>• <strong>دبل ميكاتو:</strong> 15 جم بن (60 مل مياه) + <strong>2 ملعقة فوم لبن جهينة</strong> (كوب 8 أونز).</p>
+            <p>• <strong>سنجل كونبانا:</strong> 7.5 جم بن (30 مل مياه) + <strong>10 جم ويبنج كريم</strong> بعد التشييك على صلاحيته (كوب 4 أونز).</p>
+            <p>• <strong>دبل كونبانا:</strong> 15 جم اسبرسو (60 مل مياه) + <strong>15 جم ويبنج كريم</strong> (كوب 8 أونز).</p>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>🍮 كراميل ميكاتو</span>
+              <span class="badge bg-amber-100 text-amber-900">سنجل & دبل</span>
+            </div>
+            <p>• <strong>سنجل كراميل ميكاتو (4 أونز):</strong> 10 مل فليفر فانيليا بالأسفل ⬅️ سنجل اسبرسو ⬅️ ملعقة فوم لبن ⬅️ 15 مل صوص كراميل على الوش.</p>
+            <p>• <strong>دبل كراميل ميكاتو (8 أونز):</strong> 20 مل فليفر فانيليا ⬅️ دبل اسبرسو ⬅️ 2 ملعقة فوم لبن ⬅️ 30 مل صوص كراميل على الوش.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>☕ القهوة التركية & الفرنسية</span>
+              <span class="badge bg-stone-100 text-stone-900">الرمالة 200-250°C</span>
+            </div>
+            <p>• <strong>سنجل تركي:</strong> 9 جم بن بالمعلقة المعيارية (سادة/محوج - فاتح/وسط/غامق) + 60 مل مياه معدنية باردة من الديسبنسر بالمعيار + سكر حسب الرغبة.</p>
+            <p>• <strong>دبل تركي:</strong> 18 جم بن + 80 مل مياه معدنية باردة + سكر حسب الرغبة.</p>
+            <p>• <strong>قهوة فرنسية:</strong> 9 جم بن + 100 مل لبن بارد + سكر حسب الرغبة.</p>
+            <div class="p-2 bg-stone-50 rounded-lg text-[11px] text-stone-700">
+              ⏳ <strong>طريقة التسوية:</strong> تقليب جيد حتى الذوبان ⬅️ توضع الكنكة على الرمالة ويغطى الجزء السفلي بالرمل دون ملامسة الهوت بليت ⬅️ تقليب مرة أخرى قبل الغليان ⬅️ الرفع قبل الفوران فوراً ووضع الكنكة في بولة ماء للنظافة ⬅️ صب ببطء للحفاظ على القوام والوش.
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>🍫 الهوت شوكلت التقليدي</span>
+              <span class="badge bg-red-100 text-red-900">8 / 12 / 20 أونز</span>
+            </div>
+            <p>• <strong>ميديم (8 أونز):</strong> 40 جم بودر شوكلت + 240 مل لبن.</p>
+            <p>• <strong>لارج (12 أونز):</strong> 60 جم بودر شوكلت + 360 مل لبن.</p>
+            <p>• <strong>إكس لارج (20 أونز):</strong> 80 جم بودر شوكلت + 600 مل لبن.</p>
+            <div class="p-2 bg-red-50 rounded-lg text-[11px] text-red-900">
+              🥛 <strong>التحضير:</strong> التشييك على البيتشر الخاص ووضع اللبن مع البودر والتسخين بالاستيم ثم الصب في الكوب.
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>🍓 الهوت شوكلت السبيشيال</span>
+              <span class="badge bg-pink-100 text-pink-900">كوب 12 أونز</span>
+            </div>
+            <p>• <strong>فروتي هوت شوكلت:</strong> 40 جم بودر شوكلت + 15 مل بيوريه فراولة + 240 مل لبن تسخين بالبيتشر.</p>
+            <p>• <strong>مارشملو شوكلت:</strong> 40 جم بودر شوكلت + 240 مل لبن + 5 قطع مارشملو داخل البيتشر تسخين جيد + 5 قطع مارشملو توبينج على الوش.</p>
+            <p>• <strong>سبايس هوت شوكلت:</strong> 40 جم بودر شوكلت + 240 مل لبن + 20 مل فليفر ونتر سبايسي تسخين بالبيتشر.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>🍯 لاتيهات النكهات والسبريد</span>
+              <span class="badge bg-sky-100 text-sky-900">كوب 12 أونز</span>
+            </div>
+            <p>• <strong>سبانيش لاتيه:</strong> 50 جم حليب مكثف (بوني أو نستله) يقلب مع سنجل اسبرسو + 240 مل لبن وفوم.</p>
+            <p>• <strong>لاتيه دولتشي:</strong> 30 مل صوص دولتشي يقلب مع سنجل اسبرسو + 240 مل لبن وفوم.</p>
+            <p>• <strong>وايت موكا:</strong> 30 مل صوص وايت موكا مع سنجل اسبرسو + 240 مل لبن وفوم.</p>
+            <p>• <strong>سبايسي لاتيه:</strong> 20 مل فليفر ونتر سبايسي مع سنجل اسبرسو + 240 مل لبن وفوم.</p>
+            <p>• <strong>نوتيلا كوفي:</strong> 25 مل صوص نوتيلا يقلب مع سنجل اسبرسو + 300 مل لبن وفوم.</p>
+            <p>• <strong>كوفي لوتس:</strong> 40 جم سبريد لوتس يقلب مع سنجل اسبرسو في المعيار + 240 مل لبن وفوم.</p>
+            <p>• <strong>بيستاشيو لاتيه:</strong> 40 جم سبريد بيستاشيو مع 240 مل لبن تسخين مباشر بالبيتشر.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>🍵 شاي لاتيه، أبل سيدر & جنزبيل</span>
+              <span class="badge bg-emerald-100 text-emerald-900">مشروبات دافئة</span>
+            </div>
+            <p>• <strong>تشاي لاتيه (12 أونز):</strong> 30 مل فليفر تشاي في الكوب ⬅️ تسخين 240 مل لبن وفوم ⬅️ 15 مل صوص كراميل جرنش على الوش.</p>
+            <p>• <strong>أبل سيدر:</strong> عصير تفاح بالبيتشر + 2 عود قرفة + 2 مسمار قرنفل تسخين استيم (يقدم في كوب 8 أو 12 أونز).</p>
+            <p>• <strong>جنزبيل بالعسل (8 أونز):</strong> بيتشر به 180 مل ماء + 10 جم جنزبيل فريش تسخين استيم على 70°C ⬅️ يوضع 20 جم عسل نحل امتنان + 20 مل عصير ليمون فريش في كوب 8 أونز ويصب عليه.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-amber-900 text-sm">
+              <span>🌾 مشروبات الشوفان الساخنة (Hot Oat Milk)</span>
+              <span class="badge bg-amber-100 text-amber-900">كوب 12 أونز</span>
+            </div>
+            <p>• <strong>هوت سولتيتشينو (كود 333016):</strong> 30 جم فليفر سولتد كراميل في الكوب ⬅️ استخلاص Double Espresso Shot وصبها فوق الفليفر ⬅️ تسخين وتبخير 240 مل من حليب الشوفان وإضافته للكوب.</p>
+            <p>• <strong>هوت روبيتشينو (كود 333015):</strong> 30 جم سيرب روبي شوكليت في الكوب ⬅️ استخلاص Double Espresso Shot وصبها فوق السيرب ⬅️ تسخين وتبخير 240 مل من حليب البرو شوفان وإضافته للكوب.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 1.2 BARISTA ICED DRINKS -->
+      <div id="b-cold" class="b-sub-pane hidden space-y-4">
+        <div class="bg-sky-50 border border-sky-200 p-3 rounded-2xl text-xs text-sky-950 font-semibold flex items-center justify-between">
+          <span>🧊 <strong>المعادلة الموحدة لجميع الآيس:</strong> 5 مكعبات ثلج + 100 مل لبن بارد من الثلاجة + سنجل اسبرسو</span>
+          <span class="badge bg-sky-200 text-sky-900">كوب شفاف</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">آيس لاتيه & آيس موكا</h4>
+            <p>• <strong>آيس لاتيه:</strong> كوب شفاف به 5 مكعبات ثلج + 100 مل لبن ساقع من الثلاجة + سنجل اسبرسو على الوش.</p>
+            <p>• <strong>آيس موكا:</strong> 30 مل صوص شوكلت تقلب مع سنجل اسبرسو بالمعيار ⬅️ توضع على كوب شفاف به 5 ثلج و 100 مل لبن ساقع.</p>
+            <p>• <strong>آيس وايت موكا:</strong> 30 مل صوص وايت (سولو) تقلب مع سنجل اسبرسو ⬅️ توضع على كوب به 5 ثلج و 100 مل لبن ساقع.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">آيس سبانش، دولتشي & سبايسي</h4>
+            <p>• <strong>آيس سبانش لاتيه:</strong> 50 جم حليب مكثف (بوني أو نستله) يقلب مع سنجل اسبرسو ⬅️ يوضع على كوب به 5 ثلج و 100 مل لبن ساقع.</p>
+            <p>• <strong>آيس دولتشي:</strong> 30 مل صوص دولتشي مع سنجل اسبرسو ⬅️ يوضع على كوب به 5 ثلج و 100 مل لبن ساقع.</p>
+            <p>• <strong>آيس سبايس لاتيه:</strong> 20 مل فليفر سبايسي مع سنجل اسبرسو ⬅️ يوضع على كوب به 5 ثلج و 100 مل لبن ساقع.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">آيس أمريكانو & آيس تي</h4>
+            <p>• <strong>آيس أمريكان:</strong> سنجل لونج اسبرسو 7.5 جم بن مستخلص بـ 60 مل مياه + 20 مل سيرب سكر (حسب رغبة العميل) ⬅️ يوضع على كوب شفاف به 5 ثلج ومياه باردة.</p>
+            <p>• <strong>آيس تي (بالخلاط 3 ثواني):</strong> 200 مل مياه + 40 مل فليفر شاي + 10 مل فليفر حسب الرغبة (شاي/خوخ/باشون/موخيتو) + 5 مكعبات ثلج في الخلاط لمدة <strong>3 ثواني فقط</strong> ⬅️ يصب في كوب بداخله 5 مكعبات ثلج أخرى.</p>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-amber-900 text-sm">
+              <span>🌾 مشروبات الشوفان الباردة (Iced Oat Milk)</span>
+              <span class="badge bg-amber-100 text-amber-900">كوب شفاف</span>
+            </div>
+            <p>• <strong>آيس سولتيتشينو (كود 338016):</strong> 30 مل فليفر سولتد كراميل في الكوب ⬅️ إضافة Single Espresso Shot ⬅️ إضافة مكعبات الثلج (ملء الكوب) ⬅️ وضع 200 مل من حليب الشوفان.</p>
+            <p>• <strong>آيس روبيتشينو (كود 338015):</strong> 30 مل سيرب روبي شوكليت في الكوب ⬅️ إضافة Single Espresso Shot ⬅️ إضافة مكعبات الثلج (ملء الكوب) ⬅️ وضع 200 مل من حليب الشوفان.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 1.3 BLENDED DRINKS -->
+      <div id="b-blended" class="b-sub-pane hidden space-y-4">
+        <div class="bg-amber-50 border border-amber-200 p-3 rounded-2xl text-xs text-amber-950 font-semibold flex items-center justify-between">
+          <span>⚡ <strong>قاعدة البلندر العامة:</strong> وقت الضرب موحد <strong>35 ثانية</strong> | الثلج <strong>10 مكعبات</strong> | الترتيب: سائل ⬅️ بودر/بيوريه ⬅️ ثلج</span>
+          <span class="badge bg-amber-200 text-amber-900">نظافة البلندر أولاً</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-1.5">
+            <h4 class="font-bold text-amber-800 text-sm border-b pb-1">🥤 فرابيه (Frappe)</h4>
+            <p class="text-[11px] text-slate-500">كوفي - لاتيه - موكا - وايت موكا - كراميل</p>
+            <p>• 100 مل لبن</p>
+            <p>• <strong>60 جم بودر فرابيه</strong> حسب النوع</p>
+            <p>• 10 مكعبات ثلج</p>
+            <p class="font-bold text-amber-700">ضرب 35 ثانية بالبلندر</p>
+          </div>
+
+          <div class="card-box search-item space-y-1.5">
+            <h4 class="font-bold text-red-700 text-sm border-b pb-1">🍓 سموذي (Smoothie)</h4>
+            <p class="text-[11px] text-slate-500">فراولة - خوخ - كيوي - باشون - بيري - أناناس</p>
+            <p>• 100 مل مياه من الديسبنسر</p>
+            <p>• <strong>45 مل بيوريه</strong> (3 بامب)</p>
+            <p>• 10 مكعبات ثلج</p>
+            <p class="font-bold text-red-700">ضرب 35 ثانية بالبلندر</p>
+          </div>
+
+          <div class="card-box search-item space-y-1.5">
+            <h4 class="font-bold text-blue-700 text-sm border-b pb-1">🥛 يوجرت سموذي</h4>
+            <p class="text-[11px] text-slate-500">زبادي فواكه غني وكريمي</p>
+            <p>• 100 مل لبن</p>
+            <p>• <strong>25 جم بودر يوجرت</strong></p>
+            <p>• <strong>45 مل بيوريه</strong> حسب الرغبة</p>
+            <p>• 10 ثلج | ضرب 35 ثانية</p>
+          </div>
+
+          <div class="card-box search-item space-y-1.5">
+            <h4 class="font-bold text-purple-700 text-sm border-b pb-1">🍦 ميلك تشيك & فروستر</h4>
+            <p class="text-[11px] text-slate-500">ميلك تشيك / فروستر بلندر</p>
+            <p>• <strong>ميلك تشيك:</strong> 150 مل لبن + 60 جم بودر (فراولة/شوكلت/فانيليا) + 10 ثلج (35ث).</p>
+            <p>• <strong>فروستر بالبلندر:</strong> 100 مل ماء + 80 جم بودر + 11 ثلج (35ث) - (فراولة، بينا كولادا، خوخ، بيري، أوشن بلو، تفاح، بطيخ، يوسفي، جيلي كولا، تروبيكال).</p>
+            <p>• <strong>بيستاشيو/لوتس فرابيه:</strong> 150 مل لبن + 40 جم سبريد + 60 جم بودر فانيليا + 10 ثلج (35ث).</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 1.4 MOJITOS & RED BULL -->
+      <div id="b-mocktails" class="b-sub-pane hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-emerald-800 text-sm">
+              <span>🌱 قائمة الموخيتو (Mojitos)</span>
+              <span class="badge bg-emerald-100 text-emerald-900">كوب 14 أونز شفاف</span>
+            </div>
+            <div class="p-2 bg-emerald-50 rounded-xl text-[11px] text-emerald-950">
+              📌 <strong>طريقة التجهيز الموحدة:</strong> تقطيع الليمون 4 أرباع ووضعه بالكوب ⬅️ إضافة 5 ورقات نعناع والضغط الخفيف عليهما ⬅️ وضع 5 مكعبات ثلج ⬅️ إضافة النكهة ⬅️ سكب كان سبرايت ⬅️ يقدم بكوب 14 أونز مع شاليموه وباقي الكان!
+            </div>
+            <p>• <strong>موخيتو أوريجينال:</strong> 1 بامب سيرب نعناع (10 مل).</p>
+            <p>• <strong>موخيتو باشون:</strong> 1 بامب بيوريه باشون (15 مل).</p>
+            <p>• <strong>موخيتو فراولة:</strong> 1 بامب بيوريه فراولة (15 مل).</p>
+            <p>• <strong>موخيتو أناناس:</strong> 1 بامب بيوريه أناناس (15 مل).</p>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-blue-800 text-sm">
+              <span>⚡ كوكتيلات ريد بول (Red Bull)</span>
+              <span class="badge bg-blue-100 text-blue-900">كوب 14 أونز شفاف</span>
+            </div>
+            <div class="p-2 bg-blue-50 rounded-xl text-[11px] text-blue-950">
+              📌 <strong>طريقة التجهيز الموحدة:</strong> عصر 2 ليمونة في الكوب ⬅️ إضافة 10 مكعبات ثلج ⬅️ وضع البيوريه أعلى الثلج ⬅️ صب كان الريد بول فوق المكونات ⬅️ يقدم بكوب 14 أونز مع شاليموه وباقي الكان!
+            </div>
+            <p>• <strong>كوكتيل ريد بول باشون:</strong> 1 بامب باشون + 1 بامب كيوي + كان ريد بول أوريجينال.</p>
+            <p>• <strong>كوكتيل سوبر هيرو:</strong> 1 بامب فراولة + 30 مل عصير تفاح + كان ريد بول شوجر فري.</p>
+            <p>• <strong>كوكتيل ريد بول أبريكوت:</strong> 1 بامب فراولة + 1 بامب أناناس + كان ريد بول مشمش (أبريكوت).</p>
+            <p>• <strong>كوكتيل ريد بول خوخ:</strong> 2 بامب بيوريه خوخ + كان ريد بول خوخ.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 1.5 MACHINE PREPARATIONS & SOFTENER -->
+      <div id="b-machines" class="b-sub-pane hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">🧮 تحضيرات الماكينات (Batch Recipes)</h4>
+            <div class="space-y-2 text-slate-700">
+              <div class="p-2 bg-slate-50 rounded-lg">
+                <strong>1. الويبنج كريم:</strong> إضافة 500 مل ويبنج كريم في الوعاء الخاص به وغلقه جيداً وتركيب طلقة الغاز وضخ الغاز للأسفل وهز الجهاز أعلى وأسفل بطريقة سريعة للوصول للقوام المناسب ⬅️ الحفظ بالثلاجة بصلاحية <strong>3 أيام</strong> مع الاختبار يومياً.
+              </div>
+              <div class="p-2 bg-slate-50 rounded-lg">
+                <strong>2. ماكينة الهوت شوكلت:</strong> كل 1 لتر لبن عليه <strong>160 جم بودر شوكلت</strong>. تشغيل الماكينة على 90°C أول نصف ساعة ثم تقليل الدرجة إلى 60°C. الصلاحية: <strong>يومين</strong> مع الاختبار كل شفت.
+              </div>
+              <div class="p-2 bg-slate-50 rounded-lg">
+                <strong>3. ماكينة الفروستر:</strong> كيس الفروستر 600 جم عليه 3 لتر مياه على 3 مراحل (كل 1 لتر مياه عليه <strong>200 جم بودر</strong>). الصلاحية: <strong>10 أيام</strong> داخل الماكينة مع الاختبار كل 3 أيام.
+              </div>
+              <div class="p-2 bg-slate-50 rounded-lg">
+                <strong>4. ماكينة الآيس كريم:</strong> 1950 مل مياه + 1500 مل لبن + 990 جم بودر آيس كريم على 3 مراحل في البلندر (كل مرحلة: كيس بودر 330 جم + 650 مل مياه + 500 مل لبن).
+              </div>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">🧂 طريقة غسيل السوفتنر الإلزامية (كل 15 يوم)</h4>
+            <div class="space-y-1.5 text-slate-700 leading-relaxed">
+              <p>1. غلق الماكينة.</p>
+              <p>2. وضع الذراع العلوي بشكل رأسي والذراع السفلي أقصى اليمين.</p>
+              <p>3. فك السوفتنر من الأعلى ووضع <strong>2 كيس ملح خشن</strong> ثم غلقه مرة أخرى.</p>
+              <p>4. وضع خرطوم صرف السوفتنر الشفاف بالصرف/البالوعة ووضع الذراع العلوي أقصى الشمال.</p>
+              <p>5. ترك السوفتنر لمدة <strong>30 دقيقة</strong> لاكتمال عملية الغسيل والتأكد من نقاء المياه تماماً.</p>
+              <p>6. إعادة الذراع العلوي والذراع السفلي أقصى الشمال في وضعهما الطبيعي.</p>
+              <p>7. إعادة تشغيل الماكينة.</p>
+              <p class="font-bold text-red-600">⚠️ التأكد من إجراء عملية الغسيل كل 15 يوم ولصق استيكر الصلاحية.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 1.6 BARISTA STANDARDS & VENDORS -->
+      <div id="b-standards" class="b-sub-pane hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">⏱️ جدول صلاحيات البار بعد الفتح</h4>
+            <div class="space-y-1 text-slate-700 divide-y divide-slate-100">
+              <div class="pt-1 flex justify-between"><span>سيرب وفليفر خفيف (مونين/سولو):</span> <strong>3 شهور</strong></div>
+              <div class="pt-1 flex justify-between"><span>صوصات كثيفة وبيوريه بالزجاجة:</span> <strong>28 يوم</strong></div>
+              <div class="pt-1 flex justify-between"><span>أي صوص في الإسكويزر:</span> <strong class="text-red-600">3 أيام فقط</strong></div>
+              <div class="pt-1 flex justify-between"><span>البودرات (فرابيه/يوجرت/شوكليت):</span> <span>3 شهور بالكيس / 10 أيام بالعلبة</span></div>
+              <div class="pt-1 flex justify-between"><span>بن الاسبرسو:</span> <span>10 أيام بالكيس / <strong class="text-red-600">يوم واحد بهوبر المطحنة</strong></span></div>
+              <div class="pt-1 flex justify-between"><span>البن التركي:</span> <span>10 أيام بالكيس / 3 أيام بالعلبة</span></div>
+              <div class="pt-1 flex justify-between"><span>اللبن الطبيعي جهينة:</span> <strong>يومين (48 ساعة)</strong></div>
+              <div class="pt-1 flex justify-between"><span>البرو بديل اللبن:</span> <strong>5 أيام</strong></div>
+              <div class="pt-1 flex justify-between"><span>الويبنج كريم بالثلاجة:</span> <strong>3 أيام</strong></div>
+              <div class="pt-1 flex justify-between"><span>الحليب المكثف:</span> <span>بوني (5 أيام) / نستله (3 أيام)</span></div>
+              <div class="pt-1 flex justify-between"><span>العسل، النوتيلا، القرفة:</span> <strong>10 أيام</strong></div>
+              <div class="pt-1 flex justify-between"><span>الليمون: 7 أيام | النعناع: 3 أيام | البرتقال: يومين</span></div>
+              <div class="pt-1 flex justify-between"><span>بيستاشيو ولوتس سبريد وفانيليا بودر:</span> <strong>3 شهور</strong></div>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">🌡️ درجات الحرارة والضغوط القياسية</h4>
+            <div class="space-y-1.5 text-slate-700">
+              <p>• مياه داخل ماكينة الاسبرسو: <strong>88 - 92 °C</strong></p>
+              <p>• أعلى الماكينة (تسخين الأكواب): <strong>40 - 45 °C</strong></p>
+              <p>• درجة حرارة اللبن الدافئ: <strong>45 °C</strong></p>
+              <p>• درجة حرارة اللبن الساخن: <strong>65 °C</strong></p>
+              <p>• درجة حرارة اللبن الساخن جداً: <strong>72 °C</strong></p>
+              <p>• ضغط الماكينة: <strong>8 - 10 بار</strong></p>
+              <p>• ضغط الاستيم: <strong>1.1 إلى 1.3 بار</strong></p>
+              <p>• رمالة القهوة التركية: <strong>200 - 250 °C</strong></p>
+              <p>• ثلاجة الأندر كاونتر: <strong>2 إلى 5 °C</strong></p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">🏢 المصادر المعتمدة للباريستا</h4>
+            <div class="space-y-1 text-slate-700 text-[11px]">
+              <p>• <strong>كوانتا (مونين):</strong> كراميل، بندق، فانيليا (وشوجر فري)، كوكيز، براوني، تشاي، آيريش كريم، نعناع، كريم بروليه، سولتد كراميل، ونتر سبايسي، ألموند. صوص شوكلت وكراميل، البرو بديل اللبن، البوبا، بيوريه فراولة، أناناس، خوخ، بيري، كيوي، باشون.</p>
+              <p>• <strong>سولو:</strong> سيرب سكر، صوص دولتشي، صوص وايت موكا، فليفر شاي، خوخ، موخيتو، باشون، سبريد بيستاشيو ولوتس، فرابيه فانيليا.</p>
+              <p>• <strong>AWA:</strong> بودر الفرابيه والهوت شوكلت.</p>
+              <p>• <strong>ديما / كيمبو / المصنع:</strong> بن الإسبرسو المعتمد.</p>
+              <p>• <strong>الضحى:</strong> القرفة والقرنفل | <strong>ليبتون:</strong> شاي وأعشاب.</p>
+              <p>• <strong>بريفا:</strong> ميلك تشيك فراولة وشوكلت وفانيليا، بودر زبادي، وفروستر.</p>
+              <p class="pt-1 font-bold text-slate-900">📌 معايير البامب: الصوص والسموذي = 15 مل | الفليفر = 10 مل</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- ======================= 2. FOOD DEPARTMENT ============================== -->
+    <!-- ========================================================================= -->
+    <div id="dept-food" class="dept-pane hidden space-y-4">
+      
+      <!-- Sub-tabs for Food -->
+      <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 no-scrollbar no-print px-0.5">
+        <button onclick="switchFoodSub('f-sandwiches')" class="f-sub-btn subtab-active px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">🥪 الساندوتشات والوجبات (كاملة)</button>
+        <button onclick="switchFoodSub('f-richcut')" class="f-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">🍔 ريتش كت (برجر، هوت دوج & استربس)</button>
+        <button onclick="switchFoodSub('f-breakfast')" class="f-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">🍳 الفطار الساخن وعجين الشامي</button>
+        <button onclick="switchFoodSub('f-pizza')" class="f-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">🍕 البيتزا & الإيطالي (كاملة بالأوزان)</button>
+        <button onclick="switchFoodSub('f-bakery')" class="f-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">🥐 تشغيل وتخمير وخبيز البيكري</button>
+        <button onclick="switchFoodSub('f-planogram')" class="f-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">📊 البلانوجرام الشامل (الثلاجة والكابينة)</button>
+        <button onclick="switchFoodSub('f-safety')" class="f-sub-btn subtab-inactive px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs whitespace-nowrap cursor-pointer flex-shrink-0 font-bold">🛡️ سلامة الغذاء، الصلاحيات والموردين</button>
+      </div>
+
+      <!-- 2.1 FOOD SANDWICHES & MEALS -->
+      <div id="f-sandwiches" class="f-sub-pane block space-y-4">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <!-- Vienna White Hot -->
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>🥖 ساندوتشات فيينا أبيض (تسخين)</span>
+              <span class="badge bg-red-100 text-red-800">30ث ميكرو + 1د توستر 150°C</span>
+            </div>
+            <div class="space-y-1 text-slate-700 leading-relaxed">
+              <p>• <strong>روست بيف:</strong> روست بيف فريش + جبنة + خس + صوص البط.</p>
+              <p>• <strong>بيف مدخن:</strong> بيف مدخن + جرجير + خس + طماطم مجففة + صوص بيستو.</p>
+              <p>• <strong>ستافد:</strong> بيف مدخن + تركي + جبنة بارميزان + خس + ثاوزند آيلاند.</p>
+              <p>• <strong>ميكس تشيز:</strong> جبنة شيدر + جبنة إمنتال + جبنة كريمة + خس + خيار.</p>
+              <p>• <strong>كواترو تشيز:</strong> شيدر أحمر + إمنتال + جبنة فلمنك + بلو تشيز + خس + خيار.</p>
+              <p>• <strong>تشكن طحينة:</strong> صدور فراخ + خس + طحينة.</p>
+              <p>• <strong>مشروم تشكن:</strong> صدور فراخ + فلفل ألوان + صوص هالبينو + خس.</p>
+              <p>• <strong>باربيكيو أورانج تشكن:</strong> صدور فراخ + فلفل ألوان + خس + صوص برتقال.</p>
+              <p>• <strong>أفانتي تشكن:</strong> صدور فراخ + جبنة أفانتي + فلفل ألوان + خس + فلفل أسود.</p>
+              <p>• <strong>بيستو تشكن:</strong> صدور فراخ مدخنة + طماطم مجففة + خس + صوص بيستو.</p>
+              <p>• <strong>كاري تشكن:</strong> صدور فراخ بالكاري + فلفل ألوان + خس.</p>
+              <p>• <strong>تشكن هاني مستردة:</strong> صدور فراخ + زبيب + خس + هاني ماسترد.</p>
+              <p>• <strong>ليمون تشكن:</strong> صدور فراخ + فلفل ألوان + فلفل حار + ليمون مخلل + خس + صوص رانش.</p>
+              <p>• <strong>سلامي:</strong> سلامي + جبنة شيدر + خس + ميكس صوص.</p>
+              <p>• <strong>تركي:</strong> تركي + خس + خيار + جبنة شيدر + ميكس صوص.</p>
+              <p>• <strong>ميكس كولد كت:</strong> بيف مدخن + تركي + خس + خيار + جبنة شيدر + ميكس صوص.</p>
+              <p>• <strong>بافلو تركي:</strong> صدور تركي مدخن + فلفل ألوان + خس + صوص تركي.</p>
+              <p>• <strong>رومي بسطرمة (18 سم):</strong> بسطرمة + جبنة رومي + قشطة.</p>
+              <p>• <strong>جبنة حلوم (بانيني أبيض):</strong> جبنة حلوم + جرجير + طماطم مجففة + جبنة كريمة <em>(توستر فقط دقيقتين على 150°C)</em>.</p>
+            </div>
+          </div>
+
+          <!-- Cold Vienna, Club & Wraps -->
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-cyan-900 text-sm">
+              <span>🐟 بارد، كلوب، راب & ساور دو</span>
+              <span class="badge bg-cyan-100 text-cyan-900">حبوب وتورتيلا</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <div class="p-2 bg-cyan-50 rounded-xl text-[11px] text-cyan-950">
+                🧊 <strong>ساندوتشات باردة نهائياً (فيينا براون بالحبوب):</strong><br>
+                - <strong>تونة:</strong> تونة ميكس + خس.<br>
+                - <strong>تونة بالمشمش:</strong> تونة ميكس + مشمش + خس.<br>
+                - <strong>سالمون مدخن:</strong> سالمون مدخن + كابري + خس + شبت + صوص سالمون.<br>
+                <em>(لا تسخن نهائياً، وفي حال رغبة العميل تدفئة العيش فقط بالتوستر 30 ثانية).</em>
+              </div>
+              <p class="font-bold text-slate-900 pt-1">🥪 ساندوتشات الكلوب (توستر دقيقة 150°C):</p>
+              <p>• <strong>ميكس تشيز كلوب (توست أبيض):</strong> شيدر + إمنتال + جبنة كريمة + خس.</p>
+              <p>• <strong>تركي كلوب (توست أبيض):</strong> تركي + شيدر + خس + ميكس صوص.</p>
+              <p>• <strong>تونة كلوب (توست براون - بارد):</strong> تونة + خس + فلفل ألوان + مايونيز.</p>
+              <p>• <strong>سالمون كلوب (توست براون - بارد):</strong> سالمون + كابري + شبت + خس + صوص سالمون.</p>
+              <p class="font-bold text-slate-900 pt-1">🌯 ساندوتشات الراب (تورتيلا - توستر دقيقة 150°C):</p>
+              <p>• <strong>تونة راب (تورتيلا أبيض):</strong> تونة + زبيب + زبادي يوناني + نعناع + بقدونس + فلفل ألوان + مسطردة (يسخن حسب الرغبة).</p>
+              <p>• <strong>تركي راب / سلامي راب / روست بيف راب:</strong> مع شيدر وخس وميكس صوص وخيار مخلل.</p>
+              <p>• <strong>مشروم تشكن راب:</strong> تورتيلا طماطم + صدور فراخ + خس + صوص مشروم حار.</p>
+              <p>• <strong>بافلو تركي راب:</strong> تورتيلا بقدونس + صدور تركي مدخن + خس.</p>
+              <p class="font-bold text-slate-900 pt-1">🍞 ساندوتشات ساور دو (توستر دقيقة 150°C):</p>
+              <p>• ساور دو تركي | ساور دو روزبيف | ساور دو ميكس تشيز (مع خس وشيدر ومايو كريم).</p>
+            </div>
+          </div>
+
+          <!-- King Sandwiches, Meals & Salads -->
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-purple-900 text-sm">
+              <span>👑 كينج، وجبات ساخنة & سلطات</span>
+              <span class="badge bg-purple-100 text-purple-900">كاملة</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <div class="p-2 bg-amber-50 rounded-xl text-[11px] text-amber-950">
+                👑 <strong>ساندوتشات الكينج (عيش أبيض بالعسل والحبوب):</strong><br>
+                يقطع نصفين ⬅️ ميكروويف 30 ثانية ⬅️ توستر دقيقة 150°C ⬅️ يلف كل نصف بورق زبدة بكيس البيكري.<br>
+                - <strong>كينج تونة:</strong> تونة + بصل + خس + طماطم (بارد أو حسب الرغبة).<br>
+                - <strong>كينج ميكس:</strong> تركي + روست بيف + خس + جبنة شيدر.<br>
+                - <strong>كينج تركي:</strong> تركي + خس + جبنة شيدر.<br>
+                - <strong>كينج أفانتي:</strong> تشكن + فلفل ألوان + خس + شيدر أفانتي + كريمة تشيز.<br>
+                - <strong>كينج روست بيف:</strong> روست بيف + خس + جبنة شيدر.<br>
+                - <strong>كينج تشكن مشروم:</strong> تشكن + خس + فلفل ألوان + مشروم + هالبينو.
+              </div>
+              <p class="font-bold text-slate-900 pt-1">🍲 الوجبات الساخنة (دقيقتين ميكروويف بدون غطاء + شوكة وسكينة ومنديل):</p>
+              <p>• <strong>تشكن بيستو</strong> | <strong>مكرونة صوص أحمر بنّا</strong> | <strong>فيليه مشروم صوص</strong> | <strong>دجاج كاري</strong> | <strong>بيكاتا مشروم</strong> | <strong>دجاج صوص ليمون</strong> | <strong>فيليه بيبر صوص</strong>.</p>
+              <p class="font-bold text-slate-900 pt-1">🥗 السلطات (باردة نهائياً 2-5°C مع شوكة وسكينة ومنديل):</p>
+              <p>• <strong>سلطة مكسيكية:</strong> دجاج، فاصوليا حمراء، ذرة حلوة، فلفل ألوان، مقرمشات، صوص مخصوص.</p>
+              <p>• <strong>سلطة جريك:</strong> جبنة فيتا، خس، طماطم، خيار، بصل، زيتون، فلفل ألوان، صلصة الخل.</p>
+              <p>• <strong>سلطة سيزر:</strong> دجاج، جبنة بارميزان، خس، خبز محمص، صوص سيزر.</p>
+              <p>• <strong>سلطة تونة:</strong> تونة، خيار، بصل، خس، طماطم، خل تفاح.</p>
+              <p>• <strong>سلطة روكا:</strong> جرجير، جبنة بارميزان، مشروم، خل بلسمك، زيت زيتون، عسل.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2.2 RICH CUT -->
+      <div id="f-richcut" class="f-sub-pane hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-red-700 text-sm">
+              <span>🍔 برجر سيركل كي (125 جم)</span>
+              <span class="badge bg-red-100 text-red-900">جريل 150°C</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <p>1. يستلم مجمد (-18°C) ويوضع بالفريزر مباشرة.</p>
+              <p>2. يوضع على الجريل من الفريزر مباشرة بمسحة زيت خفيفة جداً (150°C ولا يزيد نهائياً).</p>
+              <p>3. يترك على أول وجه للتسوية <strong>3 دقائق</strong> ثم يقلب على الوجه الآخر <strong>3 دقائق</strong> (ممنوع الضغط عليه نهائياً).</p>
+              <p>4. في آخر دقيقة تسوية، توضع قطعة <strong>جبنة مارلي</strong> على البرجر لتذوب لمدة دقيقة.</p>
+              <p>5. خبز البرجر بالسمسم يفتح ويسخن على الجريل بدون أي زيوت.</p>
+              <p>6. <strong>التركيب:</strong> صوص البرجر الخاص على وجهي الخبز ⬅️ خس ⬅️ قطعة الجبنة ⬅️ البرجر ⬅️ شريحة طماطم (وبصل في حالة طلب العميل) ⬅️ يغلف ويوضع في علبة التقديم.</p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-amber-700 text-sm">
+              <span>🌭 هوت دوج ريتش كت</span>
+              <span class="badge bg-amber-100 text-amber-900">60 / 80 / 100 جم</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <p>• <strong>الأحجام:</strong> 60 جم فرانكفورتر | 80 جم هوت دوج | 100 جم هوت دوج (يقدم في خبز 17-18 سم).</p>
+              <p>• <strong>مرحلة 1:</strong> يوضع داخل سخان المياه لمدة <strong>5 دقائق على 90°C</strong>.</p>
+              <p>• <strong>مرحلة 2:</strong> ينقل للجريل لمدة <strong>7 دقائق على 150°C</strong> مع تشريحه بالسكين لسرعة التسوية وتدفئة الخبز بجانبه بدون زيوت.</p>
+              <p>• <strong>الساندوتش العادي:</strong> مايونيز، كاتشب، مسطردة، باربكيو.</p>
+              <p>• <strong>الساندوتش سبيشيال:</strong> الصوصات السابقة + جبنة، سويت ريلش، هالبينو، خيار مخلل، طماطم، بصل، فلفل ألوان ⬅️ يقدم في علبة الساندوتش.</p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-orange-700 text-sm">
+              <span>🍗 تشكن استربس</span>
+              <span class="badge bg-orange-100 text-orange-900">قلاية 170°C</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <p>• <strong>الأصناف:</strong> استربس 2 قطعة (كود <strong>778111</strong>) | استربس 4 قطع (كود <strong>778116</strong>).</p>
+              <p>• استلام وتخزين مجمد (-18°C).</p>
+              <p>• عند الطلب: ديفروست في الميكروويف لمدة <strong>2 دقيقة</strong>.</p>
+              <p>• بعد الديفروست: رش نسبة خفيفة من الدقيق على قطعة الاستربس.</p>
+              <p>• القلي في القلاية على <strong>170°C لمدة من 3 إلى 5 دقائق</strong> مع استخدام تايمر.</p>
+              <p>• تصفية الزيت لمدة <strong>20 ثانية</strong> ⬅️ علبة كرتون مبطنة بورق زبدة وتسلم للعميل.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2.3 BREAKFAST & SHAMI -->
+      <div id="f-breakfast" class="f-sub-pane hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-amber-900 text-sm">
+              <span>🍳 أصناف البيض والسجق الشرقي</span>
+              <span class="badge bg-amber-100 text-amber-900">سر الأومليت</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <div class="p-2 bg-amber-50 rounded-lg text-amber-950 font-bold">
+                ✨ قاعدة الأومليت: إضافة 5 جم لبن + 2 جم بيكنج بودر لعمل أي أومليت لضمان القوام الهش!
+              </div>
+              <p>• <strong>أومليت سادة (2 بيضة):</strong> 2 بيضة + 5 جم زيت زيتون + ملعقة سفرة لبن + ملح وفلفل أبيض. يطبق نصف دائرة ويقدم في طبق بيضاوي.</p>
+              <p>• <strong>أومليت خضار:</strong> نفس المقادير + 50 جم خضار (فلفل ألوان/مشروم/بقدونس).</p>
+              <p>• <strong>أومليت جبنة:</strong> نفس المقادير + 30 جم جبنة أفانتي مبشورة (20 جم لساندوتش بيضة واحدة).</p>
+              <p>• <strong>بيض سكرامبلد:</strong> 2 بيضة + 5 جم زبدة فيرن + ملعقة لبن، تقليب عشوائي بإسباتيولا سيليكون، ورشة بقدونس فريش على الوش.</p>
+              <p>• <strong>بيض عيون:</strong> 2 بيضة تنزل ببطء في 5 جم زبدة/زيت ذائبة + ملح وفلفل بعد التسوية.</p>
+              <p>• <strong>بيض بالبسطرمة:</strong> 50 جم بسطرمة تشوح في 5 جم زبدة أولاً ثم يضاف 2 بيض ورشة فانيليا وبيكنج بودر (أو 25 جم بسطرمة لبيضة واحدة).</p>
+              <p>• <strong>تشغيل السجق الشرقي (6 دقائق):</strong> 70 جم سجق مكعبات + 100 جم فلفل ألوان مكعبات + 3 طماطم شيري مقسومة نصفين + 10 جم دبس رمان + 10 جم زيت + 5 جم ملح وفلفل (قدح زيت 1د ⬅️ فلفل 1د ⬅️ سجق وتقليب ⬅️ ملح وفلفل ⬅️ طماطم ودبس رمان وتقليبة واحدة والرفع فوراً). يقدم بعيش هوت دوج أو شامي أو طبق ومعه 2 رغيف شامي.</p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-emerald-900 text-sm">
+              <span>🧆 الفول، الفلافل، الطحينة والجبنة</span>
+              <span class="badge bg-emerald-100 text-emerald-900">أورينتال</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <p>• <strong>فول بالزبدة:</strong> 165 جم فول (250 جم مدمس) + 5 جم زبدة فيرن + ملح وفلفل وشطة + رشة 3 جم حبة البركة (الساندوتش: نصف الكمية).</p>
+              <p>• <strong>فول بالطحينة:</strong> 165 جم فول + 15 جم زيت زيتون + 15 جم طحينة (10 داخل و5 على الوش) + عصير نصف ليمونة + حبة بركة + كمون/شطة.</p>
+              <p>• <strong>فول بالبيض:</strong> 165 جم فول + 5 جم زبدة فيرن + 1 بيضة للتسوية ساخن.</p>
+              <p>• <strong>فلافل (فول أو حمص):</strong> 5 أقراص بسمة مجمدة بعد الديفروست تقلى حتى الاصفرار ⬅️ ورق تنشيف ⬅️ طبق به كابوتشي مقطع وبقدونس مبشور وبولة طحينة (الساندوتش: 10 جم كابوتشي + 3 أقراص فلافل + طحينة وسلطة خضراء).</p>
+              <p>• <strong>خليط الطحينة الأساسي:</strong> 100 جم طحينة + 80 جم مياه فاتر + عصير نصف ليمونة (5 جم) + نصف ملعقة كمون + 2 جم فلفل أبيض + 2 جم ملح ⬅️ ديسبنسر بالثلاجة.</p>
+              <p>• <strong>طبق جبنة أورينتال تشيز:</strong> 200 جم جبن بريزيدون العلبة الزرقاء مقطع 3 مستطيلات مدرجة + 10 جم زعتر + 15 جم زيت زيتون + 5 جم حبة البركة + 3 شرائح خيار 5 سم + 3 توست محمص على البانيني.</p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-yellow-900 text-sm">
+              <span>🥞 العيش الشامي، فرنش توست & بانكيك</span>
+              <span class="badge bg-yellow-100 text-yellow-900">المخبوزات والحلويات</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <p>• <strong>عجينة العيش الشامي الفريش (بالكيلو):</strong><br>
+              1 كجم دقيق فايف ستارز + 200 جم لبن كامل الدسم + 500 جم مياه + 30 جم خميرة جافة + 20 جم سكر + 10 جم ملح + 30 جم زبدة فيرن مذابة + 15 جم زيت ذرة + 5 جم سمسم + 5 جم حبة البركة.<br>
+              <em>(عجن حتى التجانس ⬅️ تغليف باستريتش وتخمير 20 دقيقة ⬅️ تقطيع كور 70 جم مع السمسم وحبة البركة ⬅️ فرد وخبز على أرضية الفرن 250°C).</em></p>
+              <p>• <strong>فرنش توست (علبة دونتس):</strong> شريحتين توست سمك 2 سم بدون حواف ⬅️ تغطيس في صوص المارينيه (2 بيضة + 150 مل لبن + 10 قرفة + 10 فانيليا) ⬅️ تسوية بمسطح مؤشر 2 بزيت مغطي نصف الطاسة ⬅️ سكر سيرب بني على كل شريحة (10 أكياس سكر بني على 350 ماء يغلي 10 دقائق) ⬅️ 50 جم صوص نوتيلا/لوتس أو 100 جم فواكه موسمية.</p>
+              <p>• <strong>بانكيك (3 شرائح بالأوردر):</strong> عجينة 1 كجم من المصنع (صلاحية 3 أيام بالثلاجة 2-5°C وممنوع تجميدها) ⬅️ طاسة بـ 3 جم زبدة ومسطح مؤشر 1 (نار هادئة) ⬅️ صب بالكبشة اللوج حتى ظهور فقاعات وقلبها (3 دقائق للشريحة) ⬅️ 50 جم صوص نوتيلا أو لوتس بين الطبقات ⬅️ علبة دونتس صغيرة (ممنوع الفوم نهائياً).</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2.4 PIZZA -->
+      <div id="f-pizza" class="f-sub-pane hidden space-y-4">
+        
+        <!-- Full Pizza Table with itemized grams -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="bg-red-800 text-white px-4 py-2.5 text-xs font-bold flex justify-between items-center">
+            <span>🍕 جدول أصناف ومقادير البيتزا بالتفصيل (العجين 250 جم + صوص البيتزا 50 جم + جبنة موتزاريلا 150 جم)</span>
+            <span class="text-amber-300 text-[10px]">الفرن: علوي 260°C / سفلي 200°C (5 إلى 7 دقائق) | تقطيع 8 قطع + 2 جم زعتر</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-right text-xs">
+              <thead class="bg-slate-100 text-slate-700 border-b">
+                <tr>
+                  <th class="p-2.5 font-bold">الصنف</th>
+                  <th class="p-2.5 font-bold">العجين والصوص</th>
+                  <th class="p-2.5 font-bold">الجبنة الموتزاريلا</th>
+                  <th class="p-2.5 font-bold">المكونات والحشوات بالتفصيل والجرامات</th>
+                  <th class="p-2.5 font-bold">طريقة رص الحشو</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y text-slate-700">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا مارجريتا</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5 font-bold text-red-600">150 جم موتزاريلا</td>
+                  <td class="p-2.5 text-slate-400">بدون حشوات إضافية</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">الجبنة كاملة دفعة واحدة فوق الصوص + 2 جم زعتر بعد الخروج</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا فراخ</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5">150 جم موتزاريلا</td>
+                  <td class="p-2.5"><strong>70 جم صدور فراخ</strong> + 40 جم فلفل ألوان + 50 جم زيتون أسود شرائح</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">نصف الجبنة ⬅️ الفراخ والخضار والزيتون ⬅️ باقي الجبنة</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا سوبر سوبريم</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5">150 جم موتزاريلا</td>
+                  <td class="p-2.5"><strong>60 جم سلامي + 30 جم روزبيف + 30 جم تركي + 30 جم بيبروني</strong></td>
+                  <td class="p-2.5 text-[11px] text-slate-500">نصف الجبنة ⬅️ تشكيلة اللحوم ⬅️ باقي الجبنة للحماية</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا ميكس جبن</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5">150 جم موتزاريلا</td>
+                  <td class="p-2.5"><strong>40 جم شيدر أصفر + 40 جم شيدر أحمر + 20 جم جبنة ريكفورد</strong></td>
+                  <td class="p-2.5 text-[11px] text-slate-500">نصف الموتزاريلا ⬅️ الأجبان الثلاثة ⬅️ باقي الموتزاريلا</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا تونة</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5">150 جم موتزاريلا</td>
+                  <td class="p-2.5"><strong>60 جم تونة</strong> + 50 جم زيتون أسود شرائح</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">نصف الجبنة ⬅️ التونة والزيتون ⬅️ باقي الجبنة</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا سلامي</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5">150 جم موتزاريلا</td>
+                  <td class="p-2.5"><strong>70 جم سلامي</strong></td>
+                  <td class="p-2.5 text-[11px] text-slate-500">نصف الجبنة ⬅️ شرائح السلامي ⬅️ باقي الجبنة</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا بيبروني</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5">150 جم موتزاريلا</td>
+                  <td class="p-2.5"><strong>70 جم بيبروني</strong></td>
+                  <td class="p-2.5 text-[11px] text-slate-500">نصف الجبنة ⬅️ شرائح البيبروني ⬅️ باقي الجبنة</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا هوت دوج</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5">150 جم موتزاريلا</td>
+                  <td class="p-2.5"><strong>60 جم هوت دوج مقطع شكل بيضاوي</strong></td>
+                  <td class="p-2.5 text-[11px] text-slate-500">نصف الجبنة ⬅️ قطع الهوت دوج ⬅️ باقي الجبنة</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا مشروم فونجي</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5">150 جم موتزاريلا</td>
+                  <td class="p-2.5"><strong>120 جم مشروم فريش</strong></td>
+                  <td class="p-2.5 text-[11px] text-slate-500">نصف الجبنة ⬅️ المشروم ⬅️ باقي الجبنة</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">بيتزا خضار</td>
+                  <td class="p-2.5">250 جم + 50 جم صوص</td>
+                  <td class="p-2.5">150 جم موتزاريلا</td>
+                  <td class="p-2.5"><strong>50 جم مشروم</strong> + 30 جم زيتون أسود شرائح</td>
+                  <td class="p-2.5 text-[11px] text-slate-500">نصف الجبنة ⬅️ الخضار ⬅️ باقي الجبنة</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="p-3 bg-slate-50 border-t flex flex-wrap gap-4 text-xs font-bold text-slate-700">
+            <span>💰 أسعار الإضافات الرسمية:</span>
+            <span>جبنة: 17 ج</span>
+            <span>خضروات: 11 ج</span>
+            <span>سلامي: 22 ج</span>
+            <span>دجاج: 22 ج</span>
+            <span>هوت دوج: 22 ج</span>
+          </div>
+        </div>
+
+        <!-- Italian Specialties & Junior Pizza -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>🥖 استرومبولي، كالزوني & كرواسون ويل</span>
+              <span class="badge bg-purple-100 text-purple-900">أصناف الكابينة</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700 leading-relaxed">
+              <p>• <strong>استرومبولي (عجائن إيطالية ملفوفة كالساندوتش):</strong><br>
+              - مشروم وزيتون (كود <strong>779223</strong>)<br>
+              - فراخ (كود <strong>779221</strong>)<br>
+              - سلامي (كود <strong>779222</strong>)<br>
+              <em>صالحية 1 يوم بالكابينة ⬅️ تسخين دقيقة ميكروويف ⬅️ يقدم بكيس البيكري مع ورق زبدة.</em></p>
+              <p>• <strong>كالزوني (عجائن إيطالية مطبقة ومقفولة):</strong><br>
+              - جبنة وزيتون مع زعتر (كود <strong>779065</strong>)<br>
+              - جبنة ومشروم (كود <strong>779066</strong>)<br>
+              - بلح مطحون مع قرفة وعين جمل (كود <strong>779067</strong>)<br>
+              <em>صالحية يومين بالكابينة ⬅️ تسخين دقيقة ميكروويف ⬅️ كيس البيكري مع ورق زبدة.</em></p>
+              <p>• <strong>كرواسون ويل:</strong><br>
+              - لوتس (كود <strong>779267</strong>)<br>
+              - نوتيلا (كود <strong>779268</strong>)<br>
+              - بيستاشيو فستق (كود <strong>779269</strong>)<br>
+              <em>الحشو الداخلي نفس المنتجات ⬅️ صالحية يومين ⬅️ تسخين 15 ثانية فقط ميكروويف.</em></p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+              <span>🍕 البيتزا الجونيور (Junior Pizza)</span>
+              <span class="badge bg-red-100 text-red-900">تسوية 3-5 دقائق</span>
+            </div>
+            <div class="space-y-1.5 text-slate-700 leading-relaxed">
+              <p>• <strong>الأكواد الرسمية:</strong><br>
+              - بيتزا جونيور مارجريتا (كود <strong>779534</strong>)<br>
+              - بيتزا جونيور مشروم (كود <strong>779535</strong>)<br>
+              - بيتزا جونيور ميكس جبن (كود <strong>779536</strong>)<br>
+              - بيتزا جونيور خضار بدون جبنة (كود <strong>779537</strong>)</p>
+              <p>• <strong>الاستلام والتخزين:</strong> تستلم مجمدة (-18°C) نصف مستوية. الصلاحية أسبوع بالفريزر ويوم بكابينة العرض.</p>
+              <p>• <strong>التسوية:</strong> صينية مدهونة 5 جم زيت زيتون، فرن علوي 260°C وسفلي 200°C لمدة <strong>من 3 إلى 5 دقائق</strong>.</p>
+              <p class="font-bold text-red-700">⚠️ قاعدة العرض الإلزامية: تعرض قطعة واحدة فقط في كابينة العرض بدون تسوية، وممنوع نهائياً عرض البيتزا بعد التسوية في الكابينة!</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2.5 BAKERY -->
+      <div id="f-bakery" class="f-sub-pane hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-amber-900 text-sm border-b pb-1.5">🥐 خطوات تخمير وخبيز البيكري اليومي</h4>
+            <div class="space-y-1.5 text-slate-700 leading-relaxed">
+              <p>1. مواعيد الخبز: <strong>7 صباحاً</strong> و <strong>12 ظهراً</strong> في حالة الحاجة (المرة الثالثة تتطلب موافقة إدارة الفود).</p>
+              <p>2. إخراج الكرواسون أو الباتيه من الفريزر والرص بالصاج <strong>بحد أقصى 8 قطع في الصاج</strong> مع تباعد كافي.</p>
+              <p>3. يترك للإسالة مدة لا تقل عن <strong>ساعة ونصف إلى ساعتين</strong> في حرارة الغرفة (37°C).</p>
+              <p>4. تشغيل المخمر قبل نهاية المدة بربع ساعة حتى تكثف البخار على الزجاج عند <strong>32°C</strong> ويدخل لمدة <strong>ساعة إلى ساعة وربع</strong>.</p>
+              <p>5. تسخين الفرن مسبقاً قبل نهاية التخمير بـ 15 دقيقة على <strong>170°C</strong>.</p>
+              <p>6. إخراج الصاجات مع <strong>مراعاة عدم هز الصاجات</strong> حتى لا يهبط العجين.</p>
+              <p>7. <strong>دهان التلميع:</strong> 2 بيضة + 10 جم لبن بارد + 2 جم فانيليا + 10 جم كريمة لباني. يلمع بفرشاة بمنتهى الهدوء دون ضغط.</p>
+              <p>8. التسوية في الفرن على <strong>160°C لمدة 18 إلى 20 دقيقة</strong> (يفتح الفرن عند الدقيقة 10 ويلف الصاج).</p>
+              <p>9. <strong>المقاسات المعتمدة:</strong> الكرواسون طول 19-20 سم وارتفاع بالمنتصف 4 سم | الباتيه طول 10-11 سم وعرض 5-6 سم وارتفاع 4 سم.</p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-red-800 text-sm border-b pb-1.5">🚫 محاذير البيكري الصارمة</h4>
+            <div class="space-y-1.5 text-slate-700 leading-relaxed">
+              <p class="font-bold text-red-600">● ممنوع منعاً باتاً تخزين البيكري في الثلاجة.</p>
+              <p class="font-bold text-red-600">● ممنوع منعاً باتاً تخزين البيكري في الفريزر بعد الاستلام.</p>
+              <p class="font-bold text-red-600">● ممنوع منعاً باتاً تسخين البيكري في الميكروويف.</p>
+              <p>● كابينة البيكري مخصصة للبيع وليست للعرض فقط، والتأكد من غلقها بإحكام بعد كل بيع.</p>
+              <p>● ممنوع تشغيل إضاءة أو تسخين في كابينة البيكري حيث تؤدي إلى إتلافه وتصلب الزبدة.</p>
+              <p>● <strong>التسخين للعميل:</strong> في الفرن فقط لمدة <strong>دقيقتين عند 180°C</strong>، مع بقاء فرن التسخين دائماً جاهزاً عند 120°C.</p>
+              <p>● الصلاحية: يوم واحد بكابينة العرض | 48 إلى 72 ساعة بالكرتونة مغلفة استريتش في الكاونتر الخلفي.</p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">⚠️ أسباب عدم جودة المخبوزات (تجنبها)</h4>
+            <div class="space-y-1.5 text-slate-700 leading-relaxed">
+              <p>1. استلام العجين من المصنع في حالة غير مجمدة.</p>
+              <p>2. وضع البيكري في صاجات ساخنة أو أسطح تزيد حرارتها عن حرارة الغرفة.</p>
+              <p>3. عدم وجود وقت كاف للإسالة والتخمير بعد الخروج من الفريزر.</p>
+              <p>4. تشغيل المخمر لدرجة تصل لتسخين العجين مما يفقده الزبدة وتسيح.</p>
+              <p>5. تشغيل الفرن لدرجة أقل أو أكثر من 170°C ولمدة تزيد عن 20 دقيقة.</p>
+              <p>6. الضغط باليد على الكرواسون والباتيه بقوة قبل أو أثناء التخمير.</p>
+              <p>7. فتح الفرن بصفة مستمرة أثناء عملية الخبيز أو الضغط عليه بعد خروجه.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2.6 PLANOGRAM -->
+      <div id="f-planogram" class="f-sub-pane hidden space-y-4">
+        
+        <div class="card-box search-item space-y-2">
+          <div class="flex justify-between items-center border-b pb-1.5 font-bold text-slate-900 text-sm">
+            <span>🥪 بلانوجرام ثلاجة الساندوتشات (4 أرفف - الرص دائماً من واجهة الثلاجة من اليمين)</span>
+            <span class="badge bg-slate-900 text-white">الترتيب الإلزامي</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 text-xs">
+            <div class="p-2.5 bg-red-50 rounded-xl border border-red-200">
+              <strong class="text-red-900 block mb-1">الرف الأول (العلوي):</strong>
+              كينج روست بيف ⬅️ كينج تركي ⬅️ كينج ميكس ⬅️ كينج أفانتي ⬅️ كينج تونة ⬅️ حلومي ⬅️ رول هوت دوج.<br>
+              <em class="text-[10px] text-red-700 mt-1 block">بديل الرف العلوي: كينج روست، كينج تركي، 3 ديزرت، حلومي، رول هوت دوج، عصير فريش.</em>
+            </div>
+            <div class="p-2.5 bg-amber-50 rounded-xl border border-amber-200">
+              <strong class="text-amber-900 block mb-1">الرف الثاني:</strong>
+              تركي ⬅️ بافلو ⬅️ ميكس ⬅️ روست بيف فريش ⬅️ روزبيف ⬅️ سلامي ⬅️ ميكس تشيز.
+            </div>
+            <div class="p-2.5 bg-blue-50 rounded-xl border border-blue-200">
+              <strong class="text-blue-900 block mb-1">الرف الثالث:</strong>
+              تونة ⬅️ سالمون ⬅️ تشكن مشروم ⬅️ تشكن أفانتي ⬅️ تشكن بيستو ⬅️ تشكن كاري ⬅️ تشكن هاني.
+            </div>
+            <div class="p-2.5 bg-purple-50 rounded-xl border border-purple-200">
+              <strong class="text-purple-900 block mb-1">الرف الرابع (الأخير):</strong>
+              رابات متنوعة ⬅️ كلوب ساندوتش متنوع ⬅️ وجبات ساخنة ⬅️ سلطات ⬅️ علب ميني ساندوتش.
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">🥐 كابينة البيكري (4 أرفف)</h4>
+            <div class="space-y-1 text-slate-700 text-[11px]">
+              <p>• <strong>الرف الأول:</strong> كالزوني (3) | استرومبولي (3).</p>
+              <p>• <strong>الرف الثاني:</strong> كرواسون بسطرمة | كرواسون زعتر | كرواسون رومي | كرواسون سادة.</p>
+              <p>• <strong>الرف الثالث:</strong> سينامون رول | كرواسون نوتيلا | تريبل شوكليت | كرواسون لوز | كرواسون كاستر | مافن جميع الأنواع.</p>
+              <p>• <strong>الرف الرابع:</strong> باتيه شوكليت | باتيه شيدر | باتيه جبنة بيضاء.</p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">🥐 كابينة البيكري (3 أرفف)</h4>
+            <div class="space-y-1 text-slate-700 text-[11px]">
+              <p>• <strong>الرف الأول:</strong> كالزوني | كالزوني | استرومبولي | كرواسون سادة | كرواسون رومي | كرواسون زعتر | كرواسون بسطرمة.</p>
+              <p>• <strong>الرف الثاني:</strong> سينامون رول | كرواسون نوتيلا | تريبل شوكليت | كرواسون لوز | كرواسون كاستر | مافن جميع الأنواع.</p>
+              <p>• <strong>الرف الثالث:</strong> باتيه شوكليت | باتيه شيدر | باتيه شيدر | باتيه جبنة بيضاء (4).</p>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">🍩 كابينة الدونتس</h4>
+            <div class="space-y-1.5 text-slate-700 text-[11px]">
+              <p>• <strong>الرف الأول من فوق:</strong> منتجات الكانتوشي.</p>
+              <p>• <strong>الرف الثاني من فوق:</strong> منتجات الإنجلش كيك.</p>
+              <p>• <strong>الرف الثالث (الكبير):</strong> منتجات الدونتس.</p>
+              <p>• <strong>الرف الأخير من تحت:</strong> منتجات الكوكيز.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2.7 FOOD SAFETY & EXPIRATIONS -->
+      <div id="f-safety" class="f-sub-pane hidden space-y-4">
+        
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="bg-slate-900 text-white px-4 py-2 text-xs font-bold flex justify-between items-center">
+            <span>⏱️ جدول تواريخ صلاحية وجودة منتجات الفوود الرسمية الكاملة (صفحات 88-90)</span>
+            <span class="text-amber-400 text-[10px]">تفتيش الجودة والأوديت</span>
+          </div>
+          <div class="overflow-x-auto max-h-96">
+            <table class="w-full text-right text-xs">
+              <thead class="bg-slate-100 text-slate-700 border-b sticky top-0">
+                <tr>
+                  <th class="p-2.5 font-bold">الصنف</th>
+                  <th class="p-2.5 font-bold">مدة الصلاحية والشروط المعتمدة</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y text-slate-700">
+                <tr><td class="p-2 font-bold">ساندوتشات كولد كاتس العادية</td><td class="p-2">يومين من تاريخ الإنتاج في ثلاجة العرض (2-5°C) بشرط الجودة.</td></tr>
+                <tr><td class="p-2 font-bold">ساندوتشات كولد كاتس (تغليف فاكيوم)</td><td class="p-2">أربعة أيام من تاريخ الإنتاج في ثلاجة العرض (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">ساندوتشات الكلوب والراب والسلطات</td><td class="p-2">يومين من تاريخ الإنتاج في ثلاجة العرض (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">الوجبات الساخنة والحلويات (كيك وموس)</td><td class="p-2">أربعة أيام من تاريخ الإنتاج في ثلاجة العرض (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">عصير فرش (عصارة البرتقال)</td><td class="p-2">15 يوم للكرتونة، ويومين بعد العصر في الثلاجة (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">عصير فرش رمسيس فريش</td><td class="p-2">سنة بالفريزر (-18°C) & 3 أيام في ثلاجة العرض (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">كرواسون وباتيه وسينامون رول</td><td class="p-2"><strong class="text-red-600">يوم واحد بكابينة العرض</strong> & 3 أيام في الكرتونة مغلفة باستريتش بالدرفة.</td></tr>
+                <tr><td class="p-2 font-bold">مافن</td><td class="p-2">يوم بكابينة العرض & 7 أيام في الكرتونة مغلفة باستريتش.</td></tr>
+                <tr><td class="p-2 font-bold">كوكيز</td><td class="p-2">14 يوماً من تاريخ الإنتاج في درجة حرارة 20-22°C.</td></tr>
+                <tr><td class="p-2 font-bold">عجينة البيتزا وصلصة البيتزا</td><td class="p-2">شهر في الفريزر (-18°C) & <strong>يوم واحد في الثلاجة (2-5°C) بعد الإذابة</strong>.</td></tr>
+                <tr><td class="p-2 font-bold">جبنة موتزاريلا</td><td class="p-2">شهر من تاريخ الإنتاج في الفريزر (-18°C).</td></tr>
+                <tr><td class="p-2 font-bold">تركي مدخن ودجاج مدخن وسلامي وروست بيف وبيبروني</td><td class="p-2">3 شهور في الفريزر (-18°C) & البورشن 3 أيام في الثلاجة (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">سجق بلدي</td><td class="p-2">شهر بالفريزر (-18°C) & 3 أيام في الثلاجة (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">بسطرمة</td><td class="p-2">3 شهور بالفريزر (-18°C) & 3 أيام في الثلاجة (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">تونة وأنشوجة</td><td class="p-2">قبل الفتح: تاريخ العلبة | <strong>بعد الفتح: يوم واحد في الثلاجة (2-5°C)</strong>.</td></tr>
+                <tr><td class="p-2 font-bold">مشروم وزيتون أسود معلب</td><td class="p-2">قبل الفتح: تاريخ العلبة | <strong>بعد الفتح: 3 أيام في الثلاجة (2-5°C)</strong>.</td></tr>
+                <tr><td class="p-2 font-bold">شيدر أصفر وشيدر أفانتي وريكفورد</td><td class="p-2">7 أيام من تاريخ الإنتاج في الثلاجة (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">البرجر</td><td class="p-2">شهر بالفريزر (-18°C) & 3 أيام في ثلاجة الفود بعد الإسالة.</td></tr>
+                <tr><td class="p-2 font-bold">الهوت دوج</td><td class="p-2">3 شهور بالفريزر (-18°C) & 3 أيام في الثلاجة (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">عيش البرجر وعيش الهوت دوج</td><td class="p-2">شهر بالفريزر & 3 أيام في ثلاجة الفود (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">جبنة مارلي شرائح</td><td class="p-2">تاريخ الانتهاء المدون على الكيس في الثلاجة (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">صوص البرجر</td><td class="p-2">شهر في ثلاجة الفود (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">هالبينو</td><td class="p-2">قبل الفتح: تاريخ العلبة | بعد الفتح: 3 أيام في الثلاجة.</td></tr>
+                <tr><td class="p-2 font-bold">خس شريديت فاكيوم</td><td class="p-2">4 أيام من تاريخ الإنتاج في الثلاجة (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">خس كابوتشا</td><td class="p-2">7 أيام من تاريخ الإنتاج في الثلاجة (2-5°C).</td></tr>
+                <tr><td class="p-2 font-bold">فول وعيش شامي</td><td class="p-2">شهر بالفريزر (-18°C) & 3 أيام في ثلاجة الفود للتشغيل.</td></tr>
+                <tr><td class="p-2 font-bold">بيض طازج</td><td class="p-2">15 يوماً في ثلاجة الفود & <strong>يوم واحد في درجة حرارة الغرفة (20-22°C) للتشغيل</strong>.</td></tr>
+                <tr><td class="p-2 font-bold">كاتشب ومايونيز وباربيكيو ومسطردة</td><td class="p-2">تاريخ العبوة بالثلاجة & <strong>3 أيام في الإسكويزر بالثلاجة</strong>.</td></tr>
+                <tr><td class="p-2 font-bold">الطحينة</td><td class="p-2">3 أيام في الثلاجة (2-5°C) بعد التحضير.</td></tr>
+                <tr><td class="p-2 font-bold">فروستر الماكينة</td><td class="p-2">10 أيام إجمالي مع تغيير الصلاحية كل 3 أيام.</td></tr>
+                <tr><td class="p-2 font-bold">دونتس</td><td class="p-2">صلاحية يوم واحد من تاريخ الإنتاج.</td></tr>
+                <tr><td class="p-2 font-bold">بيتزا جونيور</td><td class="p-2">أسبوع من تاريخ الإنتاج.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">🧼 تطهير الخضروات وصوصات السلطة</h4>
+            <div class="space-y-2 text-slate-700">
+              <div class="p-2 bg-slate-50 rounded-lg">
+                <strong>بخاخ مطهر الخضروات:</strong> يتكون من <strong>1 كوب خل + 3 كوب ماء + 1 ليمونة</strong> يوضع في البخاخ. يغسل الخضار بالماء ثم يرش السائل المطهر ويترك <strong>5 دقائق</strong> ثم يغسل بالماء ويجفف بالمنديل.
+              </div>
+              <div class="p-2 bg-slate-50 rounded-lg">
+                <strong>تطهير الخس:</strong> تقطيع الخس ونقعه في السائل المطهر لمدة <strong>15 دقيقة</strong> ثم يغسل بالماء جيداً ويترك ليجفف داخل الثلاجة <strong>10 دقائق</strong>.
+              </div>
+              <div class="p-2 bg-slate-50 rounded-lg">
+                <strong>صوص فينجريت (1 لتر):</strong> 700 مل خل + 200 مل زيت زيتون + 100 مل عصير ليمون يقلب حتى الامتزاج.
+              </div>
+              <div class="p-2 bg-slate-50 rounded-lg">
+                <strong>صوص سيركل كي (نصف لتر):</strong> 150 مل خل بلسمك + 150 مل زيت زيتون + 150 مل مسطردة + 10 جم ملح وفلفل + 10 جم سكر + 20 جم بصل مفروم.
+              </div>
+            </div>
+          </div>
+
+          <div class="card-box search-item space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm border-b pb-1.5">🏢 قائمة الموردين المعتمدين لخامات الفوود (صفحة 91)</h4>
+            <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
+              <p>• <strong>خامات البيتزا:</strong> تركي مدخن (فريش فوود - المصنع) | دجاج مدخن، سلامي، بيبروني (تست بيور - المصنع) | روست بيف وبسطرمة (دايم - المصنع) | سجق بلدي (سعودي/ريتش كات) | تونة (صن شاين) | شيدر أصفر وأفانتي (سعودي) | ريكفورد (كاستيلو - سعودي).</p>
+              <p>• <strong>الخضار:</strong> خس شريديت (سمايلز - المصنع) | خس كابوتشا، طماطم، خيار، فلفل أخضر، فلفل ألوان، بصل (مافا - سعودي).</p>
+              <p>• <strong>خامات الفطار:</strong> فول (عسل وطحينة - المصنع) | فلافل فول وحمص (بسمة/تغاميس - ريتش كات/سعودي) | بيض أحمر (ريتش كات/سعودي) | زبدة (فيرن) | زيتون ومخلل وهالبينو (الوادي) | طحينة (رشيدي الميزان) | جبنة اسطمبولي (بريزيدون) | زيت زيتون (الوادي) | دقيق (خمس نجوم).</p>
+              <p>• <strong>البرجر والهوت دوج:</strong> برجر (ريتش كات - المصنع) | هوت دوج (إيجي سويس - المصنع) | فرايز (فارم فريتس - المصنع) | عيش برجر وعيش هوت دوج وصوص برجر (المصنع) | جبنة مارلي شرائح (بريزيدون - سعودي) | توابل بطاطس (كنور الشرق الأقصى) | كاتشب، مايونيز، مسطردة، باربيكيو (هاينز - المصنع) | زيت أولين (الندى) | زيت ذرة (كريستال).</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-900 text-slate-400 py-6 text-center border-t border-slate-800 no-print mt-auto">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-3">
+      <div class="flex items-center justify-center gap-2 text-slate-300 text-xs sm:text-sm font-medium">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>دليل سيركل كي التشغيلي الشامل | مانيوال الباريستا والفوود المعتمد</span>
+      </div>
+      
+      <!-- Big Centered WhatsApp Badge -->
+      <a 
+        href="https://wa.me/201004897420" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-emerald-600/30 via-emerald-500/20 to-emerald-600/30 hover:from-emerald-600/40 hover:to-emerald-600/40 text-emerald-300 hover:text-white px-6 py-3 rounded-2xl border-2 border-emerald-500/50 hover:border-emerald-400 transition-all duration-300 shadow-lg text-sm sm:text-base font-extrabold group scale-100 hover:scale-105"
+      >
+        <span class="text-xl sm:text-2xl group-hover:rotate-12 transition-transform">💬</span>
+        <span>Developed by <strong class="text-white underline decoration-emerald-400 decoration-2 tracking-wide font-black">Mahmoud Reda</strong></span>
+        <span class="bg-emerald-500 text-slate-950 text-[11px] font-black px-2.5 py-0.5 rounded-full ml-1 uppercase">WhatsApp</span>
+      </a>
+
+      <p class="text-[11px] text-slate-500">Take it easy. Circle K Egypt</p>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT CONTROLLERS ================= -->
+  <script>
+    function switchDept(dept) {
+      const rBtn = document.getElementById('btn-main-rules');
+      const bBtn = document.getElementById('btn-main-barista');
+      const fBtn = document.getElementById('btn-main-food');
+      const mBtn = document.getElementById('btn-main-mindmap');
+      
+      const rBadge = document.getElementById('badge-rules');
+      const bBadge = document.getElementById('badge-barista');
+      const fBadge = document.getElementById('badge-food');
+      const mBadge = document.getElementById('badge-mindmap');
+      
+      const rPane = document.getElementById('dept-rules');
+      const bPane = document.getElementById('dept-barista');
+      const fPane = document.getElementById('dept-food');
+      const mPane = document.getElementById('dept-mindmap');
+
+      const inactiveClass = "dept-btn-inactive p-2 sm:p-4 rounded-2xl sm:rounded-3xl transition-all duration-300 flex flex-col items-center justify-center text-center gap-0.5 sm:gap-1 cursor-pointer relative";
+
+      rBtn.className = inactiveClass;
+      bBtn.className = inactiveClass;
+      fBtn.className = inactiveClass;
+      if (mBtn) mBtn.className = inactiveClass;
+
+      rBadge.classList.add('hidden');
+      bBadge.classList.add('hidden');
+      fBadge.classList.add('hidden');
+      if (mBadge) mBadge.classList.add('hidden');
+
+      rPane.classList.add('hidden');
+      bPane.classList.add('hidden');
+      fPane.classList.add('hidden');
+      if (mPane) mPane.classList.add('hidden');
+
+      if (dept === 'rules') {
+        rBtn.className = "dept-btn-rules-active p-2 sm:p-4 rounded-2xl sm:rounded-3xl transition-all duration-300 flex flex-col items-center justify-center text-center gap-0.5 sm:gap-1 cursor-pointer relative";
+        rBadge.classList.remove('hidden');
+        rPane.classList.remove('hidden');
+      } else if (dept === 'barista') {
+        bBtn.className = "dept-btn-barista-active p-2 sm:p-4 rounded-2xl sm:rounded-3xl transition-all duration-300 flex flex-col items-center justify-center text-center gap-0.5 sm:gap-1 cursor-pointer relative";
+        bBadge.classList.remove('hidden');
+        bPane.classList.remove('hidden');
+      } else if (dept === 'food') {
+        fBtn.className = "dept-btn-food-active p-2 sm:p-4 rounded-2xl sm:rounded-3xl transition-all duration-300 flex flex-col items-center justify-center text-center gap-0.5 sm:gap-1 cursor-pointer relative";
+        fBadge.classList.remove('hidden');
+        fPane.classList.remove('hidden');
+      } else if (dept === 'mindmap') {
+        if (mBtn) mBtn.className = "dept-btn-mindmap-active p-2 sm:p-4 rounded-2xl sm:rounded-3xl transition-all duration-300 flex flex-col items-center justify-center text-center gap-0.5 sm:gap-1 cursor-pointer relative";
+        if (mBadge) mBadge.classList.remove('hidden');
+        if (mPane) mPane.classList.remove('hidden');
+      }
+    }
+
+    function switchBaristaSub(tabId) {
+      document.querySelectorAll('.b-sub-pane').forEach(el => el.classList.add('hidden'));
+      document.getElementById(tabId).classList.remove('hidden');
+
+      document.querySelectorAll('.b-sub-btn').forEach(btn => {
+        btn.classList.remove('subtab-active');
+        btn.classList.add('subtab-inactive');
+      });
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.remove('subtab-inactive');
+        event.currentTarget.classList.add('subtab-active');
+      }
+    }
+
+    function switchFoodSub(tabId) {
+      document.querySelectorAll('.f-sub-pane').forEach(el => el.classList.add('hidden'));
+      document.getElementById(tabId).classList.remove('hidden');
+
+      document.querySelectorAll('.f-sub-btn').forEach(btn => {
+        btn.classList.remove('subtab-active');
+        btn.classList.add('subtab-inactive');
+      });
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.remove('subtab-inactive');
+        event.currentTarget.classList.add('subtab-active');
+      }
+    }
+
+    function handleSearch() {
+      const q = document.getElementById('globalSearch').value.toLowerCase().trim();
+      const items = document.querySelectorAll('.search-item');
+
+      if (q === '') {
+        items.forEach(it => it.style.display = '');
+        return;
+      }
+
+      // Show all panes during search
+      document.querySelectorAll('.dept-pane').forEach(el => el.classList.remove('hidden'));
+      document.querySelectorAll('.b-sub-pane').forEach(el => el.classList.remove('hidden'));
+      document.querySelectorAll('.f-sub-pane').forEach(el => el.classList.remove('hidden'));
+
+      items.forEach(it => {
+        const text = it.innerText.toLowerCase();
+        if (text.includes(q)) {
+          it.style.display = '';
+        } else {
+          it.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
